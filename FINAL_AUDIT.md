@@ -113,6 +113,6 @@ Featured prominently in the dedicated Credentials section:
 
 - **WebGL Client Dependency**: The Three.js 3D visualizer requires client hardware WebGL support. A lightweight CSS grid fallback is styled in case WebGL is disabled or unsupported in legacy browsers.
 - **Coursera Credential Links**: In this production template, placeholder verification links point to Coursera's root verification portal. Akhil Shibu can replace these with his exact credential verification hashes once the certificates are downloaded.
-- **Domain Canonical & DNS Configuration**: The canonical tag, Open Graph metadata, Twitter Cards, `CNAME`, `robots.txt`, and `sitemap.xml` have been configured for `https://www.akhilshibu.io/`. When pointing your registrar's DNS (e.g. Namecheap, GoDaddy, Cloudflare, Google Domains):
+- **Domain Canonical & DNS Configuration**: The canonical tag, Open Graph metadata, Twitter Cards, `CNAME`, `robots.txt`, and `sitemap.xml` have been configured for `https://www.akhilinsights.com/`. When pointing your registrar's DNS (e.g. Namecheap, GoDaddy, Cloudflare, Google Domains):
   - Set a `CNAME` record for `www` pointing to your hosting target (e.g. `eraofemperor.github.io` or your platform host).
-  - Configure apex domain forwarding or an ALIAS/ANAME record from `akhilshibu.io` to `www.akhilshibu.io`.
+  - Configure apex domain forwarding or an ALIAS/ANAME record from `akhilinsights.com` to `www.akhilinsights.com`.
