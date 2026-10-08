@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akhil Shibu | Data Analyst &amp; BI Portfolio | SQL, Excel, Power BI &amp; Python</title>
+  <meta name="description" content="Official portfolio of Akhil Shibu, Data Analyst and MCA graduate from Kerala, India. Specializing in SQL, Microsoft Excel, Power BI, and Python. Case studies include Datasentrix automated data pipelines, Kerala Road Accident Intelligence, and Bike Sales commercial dashboards.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Akhil Shibu">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- GEO Optimization Meta Tags (Geographic Engine Optimization) -->
+  <meta name="geo.region" content="IN-KL">
+  <meta name="geo.placename" content="Kerala, India">
+  <meta name="geo.position" content="9.9312;76.2673">
+  <meta name="ICBM" content="9.9312, 76.2673">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.akhilshibu.io/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230284c7'/%3E%3Cpath d='M6 22l6-8 5 4 9-11' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='26' cy='7' r='3' fill='%2338bdf8'/%3E%3C/svg%3E">
+
+  <!-- Open Graph / Social SEO -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Akhil Shibu | Data Analyst &amp; BI Portfolio">
+  <meta property="og:description" content="Data Analyst and MCA graduate from Kerala, India. Expert in SQL, Excel, Power BI, Python, and automated data pipelines.">
+  <meta property="og:url" content="https://www.akhilshibu.io/">
+  <meta property="og:image" content="https://www.akhilshibu.io/assets/akhil-og-image.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card SEO -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Akhil Shibu | Data Analyst Portfolio">
+  <meta name="twitter:description" content="SQL, Microsoft Excel, Power BI, and Python data intelligence by Akhil Shibu (Kerala, India).">
+  <meta name="twitter:image" content="https://www.akhilshibu.io/assets/akhil-og-image.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Light Mode Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data Schema: SEO, GEO & AEO (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.akhilshibu.io/#person",
+        "name": "Akhil Shibu",
+        "jobTitle": "Data Analyst",
+        "email": "mailto:akhilshibu03@gmail.com",
+        "telephone": "+919061511805",
+        "url": "https://www.akhilshibu.io/",
+        "image": "https://www.akhilshibu.io/assets/akhil-profile.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kerala",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "CHMM College For Advanced Studies"
+        },
+        "knowsAbout": [
+          "SQL",
+          "Microsoft Excel",
+          "Power BI",
+          "DAX",
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "Data Cleaning",
+          "Data Transformation",
+          "Business Intelligence",
+          "Exploratory Data Analysis",
+          "ETL Pipelines"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Google Cloud Fundamentals: Core Infrastructure",
+            "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Google API Architecture & Integration",
+            "recognizedBy": { "@type": "Organization", "name": "Google" }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "AI Programming & Foundations",
+            "recognizedBy": { "@type": "Organization", "name": "IIT / Coursera" }
+          }
+        ],
+        "sameAs": [
+          "https://github.com/eraofemperor",
+          "https://www.linkedin.com/in/akhil-shibu-"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.akhilshibu.io/#website",
+        "url": "https://www.akhilshibu.io/",
+        "name": "Akhil Shibu | Data Analyst Portfolio",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "ProfilePage",
+        "url": "https://www.akhilshibu.io/",
+        "mainEntity": { "@id": "https://www.akhilshibu.io/#person" },
+        "isPartOf": { "@id": "https://www.akhilshibu.io/#website" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Data Analytics Portfolio Projects",
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "position": 1,
+            "name": "Datasentrix",
+            "description": "Automated data cleaning, validation, and analytics reporting platform built with Django and Python.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://github.com/eraofemperor"
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 2,
+            "name": "Road Accident Analysis in Kerala",
+            "description": "Statistical and geospatial investigation of traffic accident severity across 14 Kerala districts using SQL and Power BI.",
+            "creator": { "@id": "https://www.akhilshibu.io/#person" },
+            "url": "https://github.com/eraofemperor"
+          },
+          {
+            "@type": "CreativeWork",
+            "position": 3,
+            "name": "Bike Sales Excel Dashboard",
+            "description": "Commercial margin, category trend, and customer cohort analysis built in Microsoft Excel.",
+            "creator": { "@id": "https://www.akhilshibu.io/#person" },
+            "url": "https://github.com/eraofemperor/Bike-Sales-Excel-Dashboard"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is Akhil Shibu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Akhil Shibu is an early-career Data Analyst and MCA graduate from Kerala, India, specializing in SQL, Microsoft Excel, Power BI, and Python."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What data analytics projects has Akhil Shibu built?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Akhil has engineered Datasentrix (an automated data cleaning pipeline in Django/Python), Road Accident Analysis in Kerala (geospatial severity ranking in SQL & Power BI), and the Bike Sales Excel Dashboard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What accredited certifications does Akhil Shibu hold?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Akhil holds certificates for Google Cloud Fundamentals: Core Infrastructure (Google Cloud on Coursera), Google API Architecture (Google on Coursera), and AI Programming (IIT on Coursera)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What roles is Akhil Shibu seeking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Data Analyst, Business Intelligence (BI) Analyst, Reporting Analyst, MIS Analyst, and Operations Analytics roles."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessible Skip Navigation -->
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="site-header">
+    <nav class="container site-nav" aria-label="Main Navigation">
+      <a class="nav-brand" href="#home">
+        <span class="brand-badge">AS</span>
+        <span class="brand-text">Akhil Shibu</span>
+        <span class="brand-sub">Data Analyst</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#workflow">Workflow</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#credentials">Credentials</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li>
+          <a class="nav-cta" href="assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="pulse-indicator"></span>
+            <span>Open for Data Analyst &amp; BI Roles · Kerala, India</span>
+          </div>
+
+          <h1 class="hero-title">
+            Transforming Complex Data into <span class="accent-text">Actionable Decisions.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            SQL · Microsoft Excel · Power BI · Python · Automated ETL &amp; Dashboards
+          </p>
+
+          <p class="hero-description">
+            MCA graduate and early-career Data Analyst from Kerala, India. I specialize in turning raw, messy business records into structured insights—developing automated data cleaning pipelines, calculating executive KPIs, and engineering interactive Power BI reports that drive measurable business outcomes.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              View Case Studies
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a class="btn btn-secondary" href="assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>
+              Download Resume
+            </a>
+            <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+          </div>
+
+          <div class="hero-actions" style="margin-top: -0.25rem;">
+            <a class="btn btn-sm btn-secondary" href="https://github.com/eraofemperor" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub (eraofemperor)
+            </a>
+            <a class="btn btn-sm btn-secondary" href="https://www.linkedin.com/in/akhil-shibu-" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Executive 3D Interactive Data Visualizer (Light Theme) -->
+        <aside class="v3d-card" aria-label="Interactive 3D Data Visualizer">
+          <div class="v3d-header">
+            <span class="v3d-badge">
+              <span class="pulse-indicator"></span>
+              3D Analytical Matrix
+            </span>
+            <div class="v3d-modes">
+              <button type="button" class="v3d-mode-btn active" data-mode="bars">Data Bars</button>
+              <button type="button" class="v3d-mode-btn" data-mode="terrain">Surface</button>
+              <button type="button" class="v3d-mode-btn" data-mode="network">Pipeline</button>
+            </div>
+          </div>
+
+          <div class="v3d-canvas-wrap">
+            <div id="v3dCanvasContainer" class="v3d-canvas-container"></div>
+            <div id="v3dTooltip" class="v3d-tooltip"></div>
+          </div>
+
+          <div class="v3d-footer">
+            <span>Drag to rotate · Hover to inspect metrics</span>
+            <span style="color: var(--accent-primary);">WebGL 60fps</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <div class="section-header">
+        <span class="section-tag">Analytical Profile</span>
+        <h2 class="section-title">About Akhil Shibu</h2>
+        <p class="section-desc">
+          Rooted in computer application fundamentals and analytical discipline, transforming unstructured records into verified, actionable intelligence.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: start;">
+        <div>
+          <p style="margin-bottom: 1rem; font-size: 1.025rem; color: var(--text-main);">
+            I am an MCA graduate from CHMM College for Advanced Studies in Kerala, specializing in data analytics, business intelligence engineering, and automated ETL pipelines. My work focuses on real-world business and public safety challenges—analyzing traffic risk concentrations, developing repeatable spreadsheet cleaning pipelines, and delivering executive dashboards.
+          </p>
+          <p style="margin-bottom: 1rem;">
+            Rather than relying on superficial visualizations, I prioritize the complete analytical lifecycle: scoping stakeholder requirements, profiling raw schemas, applying automated data validation rules, aggregating multi-dimensional records with SQL window functions, and designing DAX star schemas inside Power BI.
+          </p>
+          <p>
+            My practical experience comes from intensive portfolio development (Datasentrix, Kerala Road Safety Intelligence, and Bike Sales Analytics) combined with enterprise virtual job simulations with Deloitte Australia and Tata Insights.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-main);">Analytical Principles</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem;">
+            <li style="border-left: 3px solid var(--accent-primary); padding-left: 0.75rem;">
+              <strong style="color: var(--text-main); display: block;">Data Hygiene First</strong>
+              Auditing schema drift, null records, and statistical outliers before drawing business conclusions.
+            </li>
+            <li style="border-left: 3px solid var(--accent-emerald); padding-left: 0.75rem;">
+              <strong style="color: var(--text-main); display: block;">Decision-Centric Reporting</strong>
+              Designing KPI scorecards and drill-downs that directly answer executive bottlenecks.
+            </li>
+            <li style="border-left: 3px solid var(--accent-indigo); padding-left: 0.75rem;">
+              <strong style="color: var(--text-main); display: block;">Automated &amp; Repeatable</strong>
+              Engineering structured SQL scripts and Python pipelines rather than error-prone manual steps.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="container">
+      <div class="section-header">
+        <span class="section-tag">Case Studies</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">
+          Production-grade analytical platforms, public data investigations, and executive business intelligence dashboards.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Datasentrix -->
+        <article class="project-card flagship">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-category">01 · Analytics Platform · Python / Django / SQL</span>
+              <span class="project-status status-completed">Completed Architecture</span>
+            </div>
+
+            <h3 class="project-title">Datasentrix</h3>
+
+            <p class="project-summary">
+              An end-to-end automated data hygiene and reporting platform built to bridge the gap between messy multi-source spreadsheets and dependable executive reporting.
+            </p>
+
+            <div class="project-deepdive">
+              <div class="deepdive-row">
+                <span class="deepdive-label">Problem</span>
+                <span class="deepdive-text">Ad-hoc data prep in commercial teams leads to unrepeatable errors, schema drift, and unreliable downstream dashboard aggregations.</span>
+              </div>
+              <div class="deepdive-row">
+                <span class="deepdive-label">Pipeline</span>
+                <span class="deepdive-text">Automated null primary key drop-offs, Z-score outlier isolation, cohort retention aggregations, and automated KPI generation.</span>
+              </div>
+              <div class="deepdive-row">
+                <span class="deepdive-label">Learned</span>
+                <span class="deepdive-text">Structuring a cleaning-to-reporting pipeline end to end with robust validation yield tracking.</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="tech-pills">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Django</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">Data Validation</span>
+              <span class="tech-pill">Cohort Modeling</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-sm btn-primary" href="https://github.com/eraofemperor" target="_blank" rel="noopener noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Kerala Road Accident Analysis -->
+        <article class="project-card flagship">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-category">02 · Geospatial &amp; Public Safety Telemetry</span>
+              <span class="project-status status-completed">Completed Analysis</span>
+            </div>
+
+            <h3 class="project-title">Road Accident Analysis in Kerala</h3>
+
+            <p class="project-summary">
+              Comprehensive statistical investigation of 34,500+ traffic incident records across all 14 Kerala districts, pinpointing high-fatality corridors and nighttime risk clusters.
+            </p>
+
+            <div class="project-deepdive">
+              <div class="deepdive-row">
+                <span class="deepdive-label">Problem</span>
+                <span class="deepdive-text">Where, when, and why do severe road accidents occur across Kerala's national highways and rural arterial networks?</span>
+              </div>
+              <div class="deepdive-row">
+                <span class="deepdive-label">Findings</span>
+                <span class="deepdive-text">Thiruvananthapuram and Ernakulam carry 29.1% of all fatal incidents. Crashes between 20:00 and 04:00 exhibited a 64.2% higher fatality severity ratio.</span>
+              </div>
+              <div class="deepdive-row">
+                <span class="deepdive-label">Method</span>
+                <span class="deepdive-text">SQL window functions (<code style="font-family: var(--font-mono); color: var(--accent-primary);">RANK() OVER</code>), severity weighting indices, and district-level Power BI heatmaps.</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="tech-pills">
+              <span class="tech-pill">SQL Window Functions</span>
+              <span class="tech-pill">Power BI</span>
+              <span class="tech-pill">Microsoft Excel</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">MoRTH Public Data</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-sm btn-primary" href="https://github.com/eraofemperor" target="_blank" rel="noopener noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Bike Sales Excel Dashboard -->
+        <article class="project-card flagship">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-category">03 · Commercial Intelligence &amp; Margin Analysis</span>
+              <span class="project-status status-completed">Interactive Dashboard</span>
+            </div>
+
+            <h3 class="project-title">Bike Sales Excel Dashboard</h3>
+
+            <p class="project-summary">
+              Multi-dimensional commercial performance workbook analyzing product margins, demographic customer purchasing patterns, and regional seasonal variance.
+            </p>
+
+            <div class="project-deepdive">
+              <div class="deepdive-row">
+                <span class="deepdive-label">Problem</span>
+                <span class="deepdive-text">Which products, categories, and regional distribution tiers drive commercial sales performance and gross margin?</span>
+              </div>
+              <div class="deepdive-row">
+                <span class="deepdive-label">Focus</span>
+                <span class="deepdive-text">Sales performance, product and category drill-down, regional demographic variance, dynamic slicers, and revenue trends.</span>
+              </div>
+              <div class="deepdive-row">
+                <span class="deepdive-label">Tooling</span>
+                <span class="deepdive-text">Advanced Excel formulas (XLOOKUP, conditional logic), dynamic Pivot Tables, slicer timelines, and KPI summary scorecards.</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="tech-pills">
+              <span class="tech-pill">Microsoft Excel</span>
+              <span class="tech-pill">Pivot Tables</span>
+              <span class="tech-pill">Data Modeling</span>
+              <span class="tech-pill">KPI Cards</span>
+              <span class="tech-pill">Slicers</span>
+            </div>
+
+            <div class="project-links">
+              <a class="btn btn-sm btn-primary" href="https://github.com/eraofemperor/Bike-Sales-Excel-Dashboard" target="_blank" rel="noopener noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Core Skills Section -->
+    <section id="skills" class="container">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Core Skills &amp; Technical Competencies</h2>
+        <p class="section-desc">
+          A disciplined blend of statistical validation, business intelligence reporting, and database programming.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            Data Analytics &amp; Hygiene
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Schema Validation</span>
+            <span class="skill-tag">Exploratory Analysis (EDA)</span>
+            <span class="skill-tag">Z-Score Outlier Detection</span>
+            <span class="skill-tag">KPI Design</span>
+            <span class="skill-tag">Trend &amp; Cohort Analysis</span>
+            <span class="skill-tag">Root Cause Diagnostics</span>
+            <span class="skill-tag">Descriptive Statistics</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            Business Intelligence
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">DAX Measures</span>
+            <span class="skill-tag">Star Schema Modeling</span>
+            <span class="skill-tag">Executive KPI Cards</span>
+            <span class="skill-tag">Interactive Slicers</span>
+            <span class="skill-tag">Drill-down Hierarchies</span>
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Pivot Tables &amp; Lookups</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Languages &amp; Frameworks
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SQL (PostgreSQL / MySQL)</span>
+            <span class="skill-tag">CTEs &amp; Subqueries</span>
+            <span class="skill-tag">Window Functions (RANK, LAG)</span>
+            <span class="skill-tag">Python 3</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Matplotlib / Seaborn</span>
+            <span class="skill-tag">Django Backend Pipelines</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytical Workflow Section -->
+    <section id="workflow" class="container">
+      <div class="section-header">
+        <span class="section-tag">Methodology</span>
+        <h2 class="section-title">The 8-Stage Analytical Pipeline</h2>
+        <p class="section-desc">
+          How every business question moves from raw, unstructured data into verified executive action.
+        </p>
+      </div>
+
+      <div class="workflow-chain">
+        <div class="workflow-step">
+          <div class="step-num">01 · UNDERSTAND</div>
+          <div class="step-title">Business Objective</div>
+          <div class="step-desc">Clarify stakeholder KPIs, core decision bottlenecks, and measurable success criteria.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">02 · INSPECT</div>
+          <div class="step-title">Schema &amp; Quality</div>
+          <div class="step-desc">Audit raw schemas, data types, cardinality, missing null distribution, and duplicates.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">03 · CLEAN</div>
+          <div class="step-title">Validation Hygiene</div>
+          <div class="step-desc">Apply programmatic validation rules, impute or drop invalid records, and isolate outliers.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">04 · TRANSFORM</div>
+          <div class="step-title">Feature Engineering</div>
+          <div class="step-desc">Construct calculated dimensions, time lags, moving averages, and relational star schemas.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">05 · ANALYZE</div>
+          <div class="step-title">SQL &amp; Modeling</div>
+          <div class="step-desc">Execute multi-level aggregations, window partition ranks, and statistical variance checks.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">06 · VISUALIZE</div>
+          <div class="step-title">BI Dashboarding</div>
+          <div class="step-desc">Build intuitive visual representations with dynamic slicers and drill-down capabilities.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">07 · DIAGNOSE</div>
+          <div class="step-title">Root Cause Insight</div>
+          <div class="step-desc">Synthesize why anomalies occurred—separating seasonal noise from structural shifts.</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">08 · ACT</div>
+          <div class="step-title">Recommendation</div>
+          <div class="step-desc">Translate diagnostic findings into prioritized, high-leverage operational decisions.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="container">
+      <div class="section-header">
+        <span class="section-tag">Simulated Experience</span>
+        <h2 class="section-title">Virtual Job Simulations</h2>
+        <p class="section-desc">
+          Practical, client-style business intelligence exercises completed via Forage (2026).
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3 class="exp-role">Data Analytics Job Simulation</h3>
+            <span class="exp-company">Deloitte Australia · Forage (2026)</span>
+          </div>
+          <p class="exp-desc">
+            Executed client-facing data analysis tasks involving spreadsheet forensic cleaning, forensic data modeling, executive dashboard construction, and business insights presentation for commercial clients.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Client Dashboards</span>
+            <span class="tech-pill">Spreadsheet Analysis</span>
+            <span class="tech-pill">Data Storytelling</span>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3 class="exp-role">GenAI-Powered Analytics Simulation</h3>
+            <span class="exp-company">Tata Insights · Forage (2026)</span>
+          </div>
+          <p class="exp-desc">
+            Completed end-to-end exploratory data analysis (EDA), predictive dataset preparation, automated data storytelling, model validation, and responsible AI evaluation for corporate decision-makers.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Exploratory Analysis</span>
+            <span class="tech-pill">Predictive Modeling</span>
+            <span class="tech-pill">Model Validation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Accredited Credentials Section -->
+    <section id="credentials" class="container">
+      <div class="section-header">
+        <span class="section-tag">Education &amp; Credentials</span>
+        <h2 class="section-title">Academic Degree &amp; Professional Certifications</h2>
+        <p class="section-desc">
+          Formal university degree in Computer Applications paired with industry-standard Google Cloud and AI certifications.
+        </p>
+      </div>
+
+      <!-- Formal Degree Card -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-card);">
+        <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 0.35rem;">
+          Master of Computer Applications (MCA)
+        </h3>
+        <p style="color: var(--accent-primary); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">
+          CHMM College For Advanced Studies · Department of Computer Applications, Kerala, India
+        </p>
+        <p style="margin-bottom: 0;">
+          Comprehensive postgraduate coursework encompassing Relational Database Management Systems (RDBMS), Advanced SQL Query Optimization, Python Software Engineering, Algorithms &amp; Data Structures, and Enterprise Web Architectures.
+        </p>
+      </div>
+
+      <!-- Separate Accredited Courses Grid -->
+      <div class="courses-grid">
+        <div class="course-card">
+          <div>
+            <span class="course-provider-tag">Google Cloud</span>
+            <h4 class="course-title">Google Cloud Fundamentals: Core Infrastructure</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              Foundational compute, storage, BigQuery data warehousing, VPC networks, and cloud architecture fundamentals.
+            </p>
+          </div>
+          <span class="course-platform">Coursera · Authorized by Google Cloud</span>
+        </div>
+
+        <div class="course-card">
+          <div>
+            <span class="course-provider-tag">Google</span>
+            <h4 class="course-title">Google API Architecture &amp; Integration</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              API endpoint lifecycle, authentication models, RESTful data exchange, and cloud service integration.
+            </p>
+          </div>
+          <span class="course-platform">Coursera · Authorized by Google</span>
+        </div>
+
+        <div class="course-card">
+          <div>
+            <span class="course-provider-tag">IIT / Coursera</span>
+            <h4 class="course-title">AI Programming &amp; Machine Learning Foundations</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              Applied Python for artificial intelligence, NumPy matrix manipulation, mathematical modeling, and evaluation.
+            </p>
+          </div>
+          <span class="course-platform">Coursera · Issued by IIT Faculty</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (AEO & Search Engine AI Optimization) -->
+    <section id="faq" class="container">
+      <div class="section-header">
+        <span class="section-tag">Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Direct, structured answers regarding technical proficiency, analytical workflows, and availability.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>Who is Akhil Shibu and what is his background?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            Akhil Shibu is an MCA graduate and early-career Data Analyst from Kerala, India. He builds production-grade data pipelines, interactive Power BI reports, and Excel analytics models using SQL, Python, and DAX.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>What data analysis tools and frameworks do you utilize?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            The core toolkit includes SQL (CTEs, Window Functions, Group By), Microsoft Excel (Pivot tables, XLOOKUP, dynamic charts), Power BI (DAX measures, star schema modeling), and Python (Pandas, NumPy, Matplotlib, Django backend pipelines).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>What projects are featured in your portfolio?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            Key projects include <strong>Datasentrix</strong> (an automated data cleaning, validation, and KPI generation platform), <strong>Road Accident Analysis in Kerala</strong> (geospatial severity ranking of 34,500+ traffic incidents), and the <strong>Bike Sales Excel Dashboard</strong> (commercial margin and demographic analysis).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>What accredited certifications have you completed?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            Akhil has completed three specialized courses on Coursera: <strong>Google Cloud Fundamentals: Core Infrastructure</strong> (Google Cloud), <strong>Google API Architecture</strong> (Google), and <strong>AI Programming</strong> (IIT).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span>What employment opportunities are you open to?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content">
+            I am actively seeking roles as a Data Analyst, Business Intelligence (BI) Analyst, Reporting Analyst, MIS Analyst, or Operations Analyst. Open to on-site, hybrid, and remote opportunities across India and globally.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <div class="contact-card">
+        <h2 class="contact-title">Let's Discuss Data &amp; Opportunities</h2>
+        <p class="contact-desc">
+          Looking for an analyst who combines rigorous data hygiene with executive reporting? Feel free to reach out directly.
+        </p>
+
+        <div class="contact-meta">
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            akhilshibu03@gmail.com
+          </span>
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 9061511805
+          </span>
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Kerala, India
+          </span>
+        </div>
+
+        <div class="hero-actions" style="justify-content: center;">
+          <a class="btn btn-primary" href="mailto:akhilshibu03@gmail.com">
+            Send Email
+          </a>
+          <button type="button" class="btn btn-secondary" id="copyEmailBtn">
+            Copy Email Address
+          </button>
+          <a class="btn btn-ghost" href="tel:+919061511805">
+            Call Direct
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/akhil-shibu-" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/eraofemperor" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Akhil Shibu</strong> · Data Analyst &amp; Business Intelligence Portfolio
+      </div>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div>
+        © <span id="currentYear">2026</span> Akhil Shibu. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Three.js Library for 3D Visualizer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Application Logic Compiled from TypeScript -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
