@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Akhil Shibu · Data Analytics &amp; BI Projects</title>
+  <link>https://www.akhilinsights.com/</link>
+  <description>Latest Data Analytics, Python pipelines, Power BI dashboards, and geospatial case studies by Akhil Shibu.</description>
+  <language>en-US</language>
+  <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
+  <atom:link href="https://www.akhilinsights.com/feed.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>Datasentrix: Automated Data Cleaning &amp; Schema Validation Engine</title>
+    <link>https://www.akhilinsights.com/#projects</link>
+    <guid isPermaLink="false">datasentrix-app-2026</guid>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+    <description>Automated Python and Django platform bridging unstructured commercial spreadsheets with dependable executive reporting via Z-score anomaly isolation and schema validation.</description>
+  </item>
+
+  <item>
+    <title>Kerala Road Accident Severity Analysis: Geospatial &amp; Temporal Intelligence</title>
+    <link>https://www.akhilinsights.com/#projects</link>
+    <guid isPermaLink="false">kerala-accidents-2026</guid>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+    <description>Statistical analysis of 34,500+ MoRTH crash records across 14 Kerala districts isolating high-risk highway corridors and nighttime fatality multipliers using SQL window functions and Power BI.</description>
+  </item>
+
+  <item>
+    <title>Bike Sales Commercial Dashboard: Multi-Dimensional Margin Analysis</title>
+    <link>https://www.akhilinsights.com/#projects</link>
+    <guid isPermaLink="false">bike-sales-excel-2026</guid>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Multi-tier Microsoft Excel workbook featuring dynamic Pivot Tables, customer demographic segmentation, and gross margin scorecards.</description>
+  </item>
+</channel>
+</rss>

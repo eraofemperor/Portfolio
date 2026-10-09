@@ -1,5 +1,6 @@
 /**
  * Portfolio Data Models and Type Definitions
- * Supporting SEO, GEO, AEO, and Interactive 3D Telemetry
+ * Supporting Advanced SEO, GEO, AEO, Performance Telemetry, and Interactive 3D Visualizer
+ * Production Environment: Pure TypeScript (ES2022)
  */
 export {};

@@ -1,4 +1,64 @@
+# ==============================================================================
+# Robots.txt for Akhil Shibu Portfolio (https://www.akhilinsights.com)
+# Configured for Maximum Organic SEO, Geographic Engine (GEO), and AI Answer Engine (AEO) Crawling
+# ==============================================================================
+
 User-agent: *
 Allow: /
+Disallow:
 
+# AI Search & Answer Engine Bots (AEO Inclusion: Google AI Overviews, Perplexity, ChatGPT Search, Claude)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Host Specification & XML Sitemap
+Host: https://www.akhilinsights.com
 Sitemap: https://www.akhilinsights.com/sitemap.xml

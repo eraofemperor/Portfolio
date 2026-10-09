@@ -1,6 +1,7 @@
 /**
  * Portfolio Data Models and Type Definitions
- * Supporting SEO, GEO, AEO, and Interactive 3D Telemetry
+ * Supporting Advanced SEO, GEO, AEO, Performance Telemetry, and Interactive 3D Visualizer
+ * Production Environment: Pure TypeScript (ES2022)
  */
 
 export interface GeoLocation {
@@ -9,6 +10,7 @@ export interface GeoLocation {
   placename: string;
   latitude: number;
   longitude: number;
+  hubs: string[];
 }
 
 export interface AccreditedCourse {
@@ -17,6 +19,8 @@ export interface AccreditedCourse {
   platform: string;
   credentialUrl?: string;
   skills: string[];
+  courseCode?: string;
+  description: string;
 }
 
 export interface PortfolioProject {
@@ -30,6 +34,34 @@ export interface PortfolioProject {
   tools: string[];
   githubUrl: string;
   demoUrl?: string;
+  metrics: Record<string, string>;
+}
+
+export interface TechnicalSkillEntity {
+  name: string;
+  category: string;
+  proficiency: 'Expert' | 'Advanced' | 'Proficient';
+  wikidataUrl?: string;
+  wikipediaUrl?: string;
+}
+
+export interface FaqEntry {
+  question: string;
+  answer: string;
+  keywords: string[];
+  speakable: boolean;
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+  position: number;
+}
+
+export interface CoreWebVitalsMetric {
+  name: 'CLS' | 'LCP' | 'FID' | 'INP' | 'TTFB';
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
 }
 
 export type VisualizerMode = 'bars' | 'terrain' | 'network';

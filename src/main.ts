@@ -5,8 +5,13 @@
 
 import { DataVisualizer3D } from './visualizer3d.js';
 import { VisualizerMode } from './types.js';
+import { SeoEngine } from './seo.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Initialize Pure TypeScript SEO, GEO & AEO Engine
+  const seoEngine = new SeoEngine();
+  (window as any).__seoEngine = seoEngine;
+
   // 1. Initialize 3D Data Visualizer in Hero Section
   try {
     const visualizer = new DataVisualizer3D('v3dCanvasContainer');

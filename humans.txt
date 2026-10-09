@@ -1,0 +1,11 @@
+/* TEAM */
+  Data Analyst & Software Engineer: Akhil Shibu
+  Contact: akhilshibu03@gmail.com
+  Location: Kerala, India
+  LinkedIn: https://www.linkedin.com/in/akhil-shibu-
+  GitHub: https://github.com/eraofemperor
+
+/* SITE */
+  Standards: HTML5, CSS3, Pure TypeScript (ES2022), Three.js
+  Optimization: Core Web Vitals (CWV), Geographic Engine Optimization (GEO), Answer Engine Optimization (AEO)
+  Domain: https://www.akhilinsights.com
