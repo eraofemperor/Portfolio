@@ -1,0 +1,17 @@
+# Akhil Insights
+
+> Akhil Shibu is a Data Analyst & power bi specialist based in Thiruvananthapuram, Kerala, India. Data Analyst and Power BI specialist from Kerala, India, working with SQL, Python and ETL pipelines.
+
+## About
+- [About Akhil Shibu](https://www.akhilinsights.com/about/): background, MCA education, course certificates, job simulations, contact.
+- [FAQ](https://www.akhilinsights.com/faq/): short answers about tools, projects, availability.
+
+## Projects
+- [Kerala Road Accident Analysis](https://www.akhilinsights.com/projects/kerala-road-accident-analysis/): Statistical investigation of 34,500+ traffic crash records across all 14 Kerala districts, pinpointing high-fatality districts and night-time risk.
+- [Datasentrix](https://www.akhilinsights.com/projects/datasentrix/): An automated data cleaning, validation and reporting platform that turns messy multi-source spreadsheets into dependable KPI reports.
+- [Bike Sales Excel Dashboard](https://www.akhilinsights.com/projects/bike-sales-dashboard/): A multi-dimensional Excel workbook analysing product margins, customer purchasing patterns and regional seasonal variance.
+
+## Links
+- GitHub: https://github.com/eraofemperor
+- LinkedIn: https://www.linkedin.com/in/akhil-shibu-
+- Email: akhilshibu03@gmail.com

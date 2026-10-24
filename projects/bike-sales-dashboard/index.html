@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bike Sales Excel Dashboard Case Study | Akhil Insights</title>
+  <meta name="description" content="An Excel bike sales dashboard with pivot tables, slicers and KPI cards for margin, category and regional trends. See the problem, tools and approach here.">
+  <meta name="author" content="Akhil Shibu">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://www.akhilinsights.com/projects/bike-sales-dashboard/">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="Akhil Insights RSS Feed" href="https://www.akhilinsights.com/feed.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Akhil Insights">
+  <meta property="og:title" content="Bike Sales Excel Dashboard Case Study | Akhil Insights">
+  <meta property="og:description" content="An Excel bike sales dashboard with pivot tables, slicers and KPI cards for margin, category and regional trends. See the problem, tools and approach here.">
+  <meta property="og:url" content="https://www.akhilinsights.com/projects/bike-sales-dashboard/">
+  <meta property="og:image" content="https://www.akhilinsights.com/assets/akhil-og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Akhil Shibu, Data Analyst and Power BI specialist from Kerala">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bike Sales Excel Dashboard Case Study | Akhil Insights">
+  <meta name="twitter:description" content="An Excel bike sales dashboard with pivot tables, slicers and KPI cards for margin, category and regional trends. See the problem, tools and approach here.">
+  <meta name="twitter:image" content="https://www.akhilinsights.com/assets/akhil-og-image.jpg">
+
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.akhilinsights.com/#website",
+      "url": "https://www.akhilinsights.com/",
+      "name": "Akhil Insights",
+      "alternateName": "Akhil Shibu | Data Analytics & Business Intelligence",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.akhilinsights.com/projects/bike-sales-dashboard/#webpage",
+      "url": "https://www.akhilinsights.com/projects/bike-sales-dashboard/",
+      "name": "Bike Sales Excel Dashboard Case Study | Akhil Insights",
+      "description": "An Excel bike sales dashboard with pivot tables, slicers and KPI cards for margin, category and regional trends. See the problem, tools and approach here.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.akhilinsights.com/#website"
+      },
+      "about": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "dateModified": "2026-10-24",
+      "mainEntity": {
+        "@id": "https://www.akhilinsights.com/projects/bike-sales-dashboard/#project"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.akhilinsights.com/#akhil",
+      "name": "Akhil Shibu",
+      "url": "https://www.akhilinsights.com/",
+      "image": "https://www.akhilinsights.com/assets/akhil-profile-500.jpg",
+      "jobTitle": "Data Analyst",
+      "description": "Data Analyst and Power BI specialist from Kerala, India, working with SQL, Python and ETL pipelines.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thiruvananthapuram",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "CHMM College for Advanced Studies"
+      },
+      "knowsAbout": [
+        "SQL",
+        "Power BI",
+        "DAX",
+        "Python",
+        "Pandas",
+        "ETL",
+        "Data Cleaning",
+        "Data Visualization"
+      ],
+      "sameAs": [
+        "https://github.com/eraofemperor",
+        "https://www.linkedin.com/in/akhil-shibu-"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.akhilinsights.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://www.akhilinsights.com/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bike Sales Excel Dashboard",
+          "item": "https://www.akhilinsights.com/projects/bike-sales-dashboard/"
+        }
+      ]
+    },
+    {
+      "@id": "https://www.akhilinsights.com/projects/bike-sales-dashboard/#project",
+      "@type": "CreativeWork",
+      "name": "Bike Sales Excel Dashboard",
+      "description": "This case study is a multi-sheet Microsoft Excel workbook that answers which bike products, categories and regions drive sales and gross margin. It uses XLOOKUP, dynamic pivot tables, slicer timelines and KPI scorecards so a manager can filter by period, region or customer group in seconds.",
+      "url": "https://www.akhilinsights.com/projects/bike-sales-dashboard/",
+      "creator": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "dateModified": "2026-10-24",
+      "keywords": "Microsoft Excel, Pivot Tables, XLOOKUP, Slicers, KPI cards"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.akhilinsights.com/projects/bike-sales-dashboard/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does the bike sales Excel dashboard show?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The workbook shows sales performance, product and category drill-downs, regional and demographic variance, and revenue trends over time. Slicers and a timeline let a user filter every pivot table together, and KPI cards summarise revenue and gross margin at the top."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Excel features does the dashboard use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It uses XLOOKUP for joining lookup tables, conditional logic for categories, dynamic pivot tables for drill-downs, slicer timelines for filtering and KPI summary scorecards. Together they turn a flat sales table into an interactive dashboard that needs no macros."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head><body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <header class="site-header">
+    <nav class="container site-nav" aria-label="Main Navigation">
+      <a class="nav-brand" href="/">
+        <span class="brand-badge" aria-hidden="true">AI</span>
+        <span class="brand-text">Akhil Insights</span>
+        <span class="brand-sub">Data Analyst</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+        <li><a class="nav-link active" aria-current="page" href="/projects/">Projects</a></li>
+        <li><a class="nav-link" href="/faq/">FAQ</a></li>
+        <li><a class="nav-link" href="/about/#contact">Contact</a></li>
+        <li><a class="nav-cta" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li aria-current="page">Bike Sales Excel Dashboard</li></ol></nav>
+    <article class="container case-study">
+      <header class="section-header">
+        <span class="section-tag">Case study</span>
+        <h1 class="section-title">Bike Sales Excel Dashboard: Margin and Region Analysis</h1>
+        <p class="answer-box">This case study is a multi-sheet Microsoft Excel workbook that answers which bike products, categories and regions drive sales and gross margin. It uses XLOOKUP, dynamic pivot tables, slicer timelines and KPI scorecards so a manager can filter by period, region or customer group in seconds.</p>
+      </header>
+      <div class="table-wrap"><table class="facts-table"><caption>Project facts</caption><tbody><tr><th scope="row">Role</th><td>Analyst (solo portfolio project)</td></tr><tr><th scope="row">Tool</th><td>Microsoft Excel</td></tr><tr><th scope="row">Techniques</th><td>XLOOKUP, pivot tables, slicers, KPI cards</td></tr><tr><th scope="row">Focus</th><td>Sales, margin, category and regional trends</td></tr><tr><th scope="row">Code</th><td><a href="https://github.com/eraofemperor/Bike-Sales-Excel-Dashboard" rel="noopener">github.com/eraofemperor/Bike-Sales-Excel-Dashboard</a></td></tr></tbody></table></div>
+
+      <h2>What problem does this project solve?</h2>
+      <p>Which products, categories and regional distribution tiers drive sales performance and gross margin, and how do customer demographics change what people buy?</p>
+
+      <h2>How was it built? (method)</h2>
+      <ol class="steps"><li>Cleaned the sales data and standardised categories and demographic fields.</li><li>Joined lookup tables with XLOOKUP and conditional logic.</li><li>Built dynamic pivot tables for product, category and region drill-downs.</li><li>Added slicer timelines so any view can be filtered by period.</li><li>Summarised results in KPI scorecards for revenue and margin.</li></ol>
+      <figure class="case-figure"><div class="figure-scroll"><svg viewBox="0 0 896 84" width="896" height="84" role="img" aria-label="Workflow diagram of the bike sales dashboard: clean data, join with XLOOKUP, build pivot tables, add slicers, show KPI cards." xmlns="http://www.w3.org/2000/svg"><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#0284c7"/></marker></defs><g><rect x="0" y="8" width="160" height="68" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/><text x="80" y="45" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Clean data</text><path d="M164 42 h16" stroke="#0284c7" stroke-width="2" marker-end="url(#a)"/></g><g><rect x="184" y="8" width="160" height="68" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/><text x="264" y="45" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">XLOOKUP joins</text><path d="M348 42 h16" stroke="#0284c7" stroke-width="2" marker-end="url(#a)"/></g><g><rect x="368" y="8" width="160" height="68" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/><text x="448" y="45" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Pivot tables</text><path d="M532 42 h16" stroke="#0284c7" stroke-width="2" marker-end="url(#a)"/></g><g><rect x="552" y="8" width="160" height="68" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/><text x="632" y="45" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Slicers</text><path d="M716 42 h16" stroke="#0284c7" stroke-width="2" marker-end="url(#a)"/></g><g><rect x="736" y="8" width="160" height="68" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/><text x="816" y="45" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">KPI cards</text></g></svg></div><figcaption>Workflow diagram of the bike sales dashboard: clean data, join with XLOOKUP, build pivot tables, add slicers, show KPI cards.</figcaption></figure>
+
+      <h2>What were the results?</h2>
+      <div class="table-wrap"><table><thead><tr><th>Measure</th><th>Result</th></tr></thead><tbody><tr><td>Dashboard views</td><td><strong>Sales performance, category and product drill-down</strong></td></tr><tr><td>Dimensions</td><td><strong>Region, customer demographics, time</strong></td></tr><tr><td>Interactivity</td><td><strong>Slicers and timeline filters</strong></td></tr><tr><td>Output</td><td><strong>KPI summary scorecards</strong></td></tr></tbody></table></div>
+      
+      <h2>Why Excel instead of Power BI?</h2>
+      <p>Many small teams already work in Excel. A well-modelled workbook with pivot tables and slicers gives them interactive analysis without new software. For larger data and shared reporting, the same approach moves to Power BI, as in the <a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a>.</p>
+
+      <h2>Which tools were used?</h2>
+      <div class="tech-pills"><span class="tech-pill">Microsoft Excel</span><span class="tech-pill">Pivot Tables</span><span class="tech-pill">XLOOKUP</span><span class="tech-pill">Slicers</span><span class="tech-pill">KPI cards</span></div>
+      <p><a class="btn btn-sm btn-primary" href="https://github.com/eraofemperor/Bike-Sales-Excel-Dashboard" target="_blank" rel="noopener noreferrer">View Bike Sales Excel Dashboard on GitHub</a></p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-trigger"><span>What does the bike sales Excel dashboard show?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-content">
+            <p>The workbook shows sales performance, product and category drill-downs, regional and demographic variance, and revenue trends over time. Slicers and a timeline let a user filter every pivot table together, and KPI cards summarise revenue and gross margin at the top.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-trigger"><span>Which Excel features does the dashboard use?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-content">
+            <p>It uses XLOOKUP for joining lookup tables, conditional logic for categories, dynamic pivot tables for drill-downs, slicer timelines for filtering and KPI summary scorecards. Together they turn a flat sales table into an interactive dashboard that needs no macros.</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>More case studies</h2>
+      <ul class="related"><li><a href="/projects/kerala-road-accident-analysis/">Kerala Road Accident Analysis: Statistical investigation of 34,500+ traffic crash records across all 14 Kerala districts, pinpointing high-fatality districts and night-time risk.</a></li><li><a href="/projects/datasentrix/">Datasentrix: An automated data cleaning, validation and reporting platform that turns messy multi-source spreadsheets into dependable KPI reports.</a></li>
+        <li><a href="/about/">About Akhil Shibu</a> and <a href="/about/#contact">how to contact him</a></li></ul>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>Akhil Shibu</strong> · Data Analyst & Power BI Specialist</div>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="/about/">About Akhil Shibu</a>
+        <a href="/projects/">Data analytics projects</a>
+        <a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a>
+        <a href="/projects/datasentrix/">Datasentrix</a>
+        <a href="/projects/bike-sales-dashboard/">Bike sales dashboard</a>
+        <a href="/faq/">FAQ</a>
+        <a href="https://github.com/eraofemperor" rel="me noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/akhil-shibu-" rel="me noopener">LinkedIn</a>
+      </nav>
+      <div>© <span id="currentYear">2026</span> Akhil Shibu. All rights reserved.</div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

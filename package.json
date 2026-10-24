@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Akhil Insights portfolio static site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "tsc && node build/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eraofemperor/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eraofemperor/Portfolio/issues"
+  },
+  "homepage": "https://github.com/eraofemperor/Portfolio#readme",
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,19 +1,19 @@
 {
-  "name": "Akhil Shibu | Data Analyst & Power BI Portfolio",
-  "short_name": "Akhil Shibu",
-  "description": "Portfolio of Akhil Shibu, Data Analyst from Kerala, India. Expert in SQL, Python, Excel, Power BI, and Google Cloud analytics.",
+  "name": "Akhil Insights | Akhil Shibu, Data Analyst",
+  "short_name": "Akhil Insights",
+  "description": "Data Analyst and Power BI specialist from Kerala, India, working with SQL, Python and ETL pipelines.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0284c7",
   "icons": [
     {
-      "src": "assets/icon-192.png",
+      "src": "/assets/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icon-512.png",
+      "src": "/assets/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

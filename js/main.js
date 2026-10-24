@@ -1,52 +1,102 @@
 /**
  * Main Application Logic for Akhil Shibu Portfolio
- * Written in TypeScript (Zero external UI frameworks)
+ * Written in TypeScript (zero UI frameworks). The WebGL hero (Three.js + visualizer)
+ * is lazy-loaded: only when the card is visible and the browser is idle, or on tap.
  */
-import { DataVisualizer3D } from './visualizer3d.js';
-import { SeoEngine } from './seo.js';
-document.addEventListener('DOMContentLoaded', () => {
-    // 0. Initialize Pure TypeScript SEO, GEO & AEO Engine
-    const seoEngine = new SeoEngine();
-    window.__seoEngine = seoEngine;
-    // 1. Initialize 3D Data Visualizer in Hero Section
-    try {
-        const visualizer = new DataVisualizer3D('v3dCanvasContainer');
-        const modeButtons = document.querySelectorAll('.v3d-mode-btn');
-        modeButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                modeButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const mode = btn.dataset.mode;
-                if (mode) {
-                    visualizer.setMode(mode);
-                }
-            });
-        });
-    }
-    catch (err) {
-        console.warn('3D visualizer initialized with standard fallback:', err);
-    }
-    // 2. FAQ Accordion Handler (Accessible ARIA state)
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const trigger = item.querySelector('.faq-trigger');
-        if (!trigger)
-            return;
-        trigger.addEventListener('click', () => {
-            const isOpen = item.classList.contains('open');
-            faqItems.forEach(i => {
-                i.classList.remove('open');
-                const t = i.querySelector('.faq-trigger');
-                if (t)
-                    t.setAttribute('aria-expanded', 'false');
-            });
-            if (!isOpen) {
-                item.classList.add('open');
-                trigger.setAttribute('aria-expanded', 'true');
-            }
-        });
+const THREE_URL = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.async = true;
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error(`Failed to load ${src}`));
+        document.head.appendChild(s);
     });
-    // 3. Mobile Navigation Drawer
+}
+function initLazyHero() {
+    const container = document.getElementById('v3dCanvasContainer');
+    if (!container)
+        return;
+    const poster = document.getElementById('v3dPoster');
+    const loadBtn = document.getElementById('v3dLoadBtn');
+    const modes = document.getElementById('v3dModes');
+    let started = false;
+    const start = async () => {
+        if (started)
+            return;
+        started = true;
+        if (loadBtn) {
+            loadBtn.disabled = true;
+            loadBtn.textContent = 'Loading…';
+        }
+        try {
+            await loadScript(THREE_URL);
+            const { DataVisualizer3D } = await import('./visualizer3d.js');
+            container.innerHTML = '';
+            const visualizer = new DataVisualizer3D('v3dCanvasContainer');
+            if (modes)
+                modes.hidden = false;
+            const modeButtons = document.querySelectorAll('.v3d-mode-btn');
+            modeButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modeButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const mode = btn.dataset.mode;
+                    if (mode)
+                        visualizer.setMode(mode);
+                });
+            });
+        }
+        catch (err) {
+            console.warn('3D visualizer unavailable, keeping static poster:', err);
+            started = false;
+            if (loadBtn) {
+                loadBtn.disabled = false;
+                loadBtn.textContent = 'Retry 3D view';
+            }
+        }
+    };
+    loadBtn?.addEventListener('click', () => void start());
+    poster?.addEventListener('pointerenter', () => {
+        // Warm up the connection on intent
+        if (!document.querySelector('link[rel="preconnect"][href="https://cdnjs.cloudflare.com"]')) {
+            const l = document.createElement('link');
+            l.rel = 'preconnect';
+            l.href = 'https://cdnjs.cloudflare.com';
+            document.head.appendChild(l);
+        }
+    }, { once: true });
+    // Auto-start only on capable connections: visible + idle. Otherwise wait for a tap.
+    const conn = navigator.connection;
+    const saveData = !!(conn && (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '')));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const smallScreen = window.matchMedia('(max-width: 768px)').matches;
+    if (saveData || reduceMotion || smallScreen || !('IntersectionObserver' in window))
+        return;
+    const idle = (cb) => {
+        const ric = window.requestIdleCallback;
+        if (ric)
+            ric(cb, { timeout: 4000 });
+        else
+            setTimeout(cb, 2500);
+    };
+    const io = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) {
+            io.disconnect();
+            const go = () => idle(() => void start());
+            if (document.readyState === 'complete')
+                go();
+            else
+                window.addEventListener('load', go, { once: true });
+        }
+    });
+    io.observe(container);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Lazy WebGL hero (home page only)
+    initLazyHero();
+    // 2. Mobile Navigation Drawer
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     if (navToggle && navMenu) {
@@ -68,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    // 4. Copy Email with Accessible Toast Notification
+    // 3. Copy Email with Accessible Toast Notification
     const copyBtn = document.getElementById('copyEmailBtn');
     const toast = document.getElementById('toast');
     if (copyBtn && toast) {
@@ -89,41 +139,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    // 5. Back to Top Button
+    // 4. Back to Top Button
     const backToTop = document.getElementById('backToTop');
     if (backToTop) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 450) {
-                backToTop.classList.add('visible');
-            }
-            else {
-                backToTop.classList.remove('visible');
-            }
+            backToTop.classList.toggle('visible', window.scrollY > 450);
         }, { passive: true });
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-    // 6. Active Nav Link Scrollspy via IntersectionObserver
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    if ('IntersectionObserver' in window && sections.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        const href = link.getAttribute('href');
-                        link.classList.toggle('active', href === `#${id}`);
-                    });
-                }
-            });
-        }, { rootMargin: '-25% 0px -65% 0px' });
-        sections.forEach(s => observer.observe(s));
-    }
-    // 7. Dynamic Footer Year
+    // 5. Dynamic Footer Year
     const yearEl = document.getElementById('currentYear');
-    if (yearEl) {
+    if (yearEl)
         yearEl.textContent = String(new Date().getFullYear());
-    }
 });
+export {};

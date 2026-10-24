@@ -3,6 +3,22 @@
    Design System: Professional Light-Mode Executive Data Architecture
    ========================================================================== */
 
+/* Self-hosted fonts (latin subset), preloaded in <head>, font-display: swap */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(../assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(../assets/fonts/jetbrains-mono-latin.woff2) format('woff2');
+}
+
 :root {
   --bg-base: #f8fafc;
   --bg-surface: #ffffff;
@@ -1378,5 +1394,68 @@ section {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+/* ==========================================================================
+   Multi-page components: breadcrumbs, prose, tables, case studies, FAQ <details>
+   ========================================================================== */
+.breadcrumb { padding-top: 1.5rem; font-size: 0.8rem; font-family: var(--font-mono); }
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; color: var(--text-muted); }
+.breadcrumb li + li::before { content: "/"; margin-right: 0.4rem; color: var(--text-dim); }
+.breadcrumb [aria-current] { color: var(--text-main); }
+.breadcrumb + section, .breadcrumb + article { padding-top: 2rem; }
+
+.hero-location { font-size: 0.85rem; color: var(--text-muted); }
+.more-link { margin-top: 1.5rem; font-weight: 600; }
+.sub-title { font-size: 1.5rem; margin: 2.5rem 0 1rem; }
+[hidden] { display: none !important; }
+
+/* Lazy WebGL poster (shown until the 3D view loads) */
+.v3d-poster { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; }
+.v3d-poster svg { width: min(70%, 260px); height: auto; }
+.v3d-canvas-container:has(.v3d-poster) { cursor: default; }
+
+.workflow-chain { list-style: none; }
+
+.prose h2, .case-study h2 { font-size: 1.4rem; margin: 2rem 0 0.75rem; }
+.prose p, .case-study p { margin-bottom: 1rem; max-width: 74ch; }
+.principles { margin: 0 0 1rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; max-width: 74ch; }
+.case-study { padding-bottom: 3rem; max-width: 900px; }
+.answer-box { font-size: 1.1rem !important; background: var(--accent-primary-light); border-left: 4px solid var(--accent-primary); padding: 1rem 1.25rem; border-radius: var(--radius-sm); color: var(--text-main) !important; max-width: none !important; }
+.steps { margin: 0 0 1.5rem 1.4rem; display: flex; flex-direction: column; gap: 0.5rem; }
+code { font-family: var(--font-mono); color: var(--accent-primary); font-size: 0.9em; }
+.related { margin-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.note { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-surface); }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+caption { text-align: left; font-weight: 700; padding: 0.75rem 1rem; color: var(--text-main); }
+th, td { text-align: left; padding: 0.7rem 1rem; border-top: 1px solid var(--border-subtle); vertical-align: top; }
+thead th { background: var(--bg-surface-elevated); color: var(--text-main); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.facts-table th { width: 9rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; }
+
+.credential-main { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-card); margin-bottom: 1rem; }
+.credential-main h3 { margin-bottom: 0.3rem; }
+.cred-sub { color: var(--accent-primary) !important; font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem !important; }
+
+.case-figure { margin: 1.5rem 0; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; }
+.case-figure svg { display: block; max-width: 100%; height: auto; }
+.figure-scroll { overflow-x: auto; }
+.case-figure figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.6rem; }
+
+.project-title a { color: inherit; }
+.project-title a:hover { color: var(--accent-primary); }
+
+/* FAQ built on native <details>: answers are in the HTML without JavaScript */
+details.faq-item > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 1.15rem 1.35rem; font-weight: 600; font-size: 1rem; color: var(--text-main); }
+details.faq-item > summary::-webkit-details-marker { display: none; }
+details.faq-item[open] .faq-icon { transform: rotate(45deg); }
+details.faq-item[open] .faq-content { display: block; }
+.faq-content p { margin-bottom: 0.6rem; }
+
+@media (max-width: 768px) {
+  .footer-nav { flex-direction: column; gap: 0.5rem; }
+  .facts-table th { width: 6rem; }
 }
 

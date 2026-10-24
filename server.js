@@ -17,25 +17,39 @@ const MIME = {
   '.jpeg': 'image/jpeg',
   '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
+  '.woff2': 'font/woff2',
   '.pdf': 'application/pdf',
   '.ico': 'image/x-icon'
 };
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
-  if (reqPath === '/' || reqPath === '') reqPath = '/portfolio.html';
-  const filePath = path.join(ROOT, reqPath);
+  let filePath = path.join(ROOT, reqPath);
+  if (!filePath.startsWith(ROOT)) {
+    res.writeHead(403); res.end('Forbidden'); return;
+  }
 
   fs.stat(filePath, (err, stats) => {
-    if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('404 Not Found');
-      return;
+    // Directory URLs serve their index.html, like GitHub Pages
+    if (!err && stats.isDirectory()) {
+      if (!reqPath.endsWith('/')) {
+        res.writeHead(301, { Location: reqPath + '/' });
+        res.end();
+        return;
+      }
+      filePath = path.join(filePath, 'index.html');
     }
-    const ext = path.extname(filePath).toLowerCase();
-    const contentType = MIME[ext] || 'application/octet-stream';
-    res.writeHead(200, { 'Content-Type': contentType });
-    fs.createReadStream(filePath).pipe(res);
+    fs.stat(filePath, (err2, st2) => {
+      if (err2 || !st2.isFile()) {
+        const nf = path.join(ROOT, '404.html');
+        res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+        fs.existsSync(nf) ? fs.createReadStream(nf).pipe(res) : res.end('404 Not Found');
+        return;
+      }
+      const ext = path.extname(filePath).toLowerCase();
+      res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
+      fs.createReadStream(filePath).pipe(res);
+    });
   });
 });
 
