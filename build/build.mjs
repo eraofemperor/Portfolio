@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
-import { DOMAIN, BUILD_DATE, PERSON, PROJECTS, FAQS, PAGES } from './site.mjs';
+import { DOMAIN, BUILD_DATE, PERSON, PROJECTS, FAQS, PAGES, INDEXNOW_KEY } from './site.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -45,8 +45,10 @@ const personNode = () => ({
   description: PERSON.bio,
   address: { '@type': 'PostalAddress', addressLocality: PERSON.locality, addressRegion: PERSON.region, addressCountry: PERSON.country },
   alumniOf: { '@type': 'CollegeOrUniversity', name: PERSON.college },
-  knowsAbout: ['SQL', 'Power BI', 'DAX', 'Python', 'Pandas', 'ETL', 'Data Cleaning', 'Data Visualization'],
+  knowsAbout: ['SQL', 'SQL window functions', 'Power BI', 'DAX', 'Python', 'Pandas', 'Django', 'Microsoft Excel', 'Pivot Tables', 'XLOOKUP', 'ETL', 'Data Cleaning', 'Data Validation', 'Data Visualization'],
   sameAs: [PERSON.github, PERSON.linkedin],
+  hasOccupation: { '@type': 'Occupation', name: 'Data Analyst', occupationLocation: { '@type': 'Country', name: 'India' }, skills: 'SQL, Power BI, Python, Excel' },
+  mainEntityOfPage: url('/about/'),
 });
 const websiteNode = () => ({
   '@type': 'WebSite',
@@ -164,6 +166,7 @@ function footer() {
       <div><strong>${PERSON.name}</strong> · ${PERSON.role}</div>
       <nav class="footer-nav" aria-label="Footer Navigation">
         <a href="/about/">About Akhil Shibu</a>
+        <a href="/resume/">Online resume</a>
         <a href="/projects/">Data analytics projects</a>
         <a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a>
         <a href="/projects/datasentrix/">Datasentrix</a>
@@ -363,7 +366,7 @@ ${contactBlock()}
   graph.push(faqNode(page, FAQS.slice(0, 3)));
   const redirect = `  <script>
     // Old single-page anchors (#about, #projects...) now live on real pages.
-    (function(){var m={'#about':'/about/','#projects':'/projects/','#faq':'/faq/','#credentials':'/about/#credentials','#experience':'/about/#experience','#contact':'/about/#contact'};var t=m[location.hash];if(t)location.replace(t);})();
+    (function(){var m={'#about':'/about/','#projects':'/projects/','#faq':'/faq/','#credentials':'/about/#credentials','#contact':'/about/#contact'};var t=m[location.hash];if(t)location.replace(t);})();
   </script>
 `;
   return head(page, { graph, preload: '' }).replace('</head>', redirect + '</head>') + header('/') + hero + footer();
@@ -402,13 +405,13 @@ function aboutPage() {
             <div class="profile-meta-item"><span>🎓 MCA, Kerala University (2026)</span></div>
             <div class="profile-meta-item"><span>💼 Open to relocation &amp; remote</span></div>
           </div>
-          <div class="profile-actions"><a class="btn btn-sm btn-primary" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Download resume (PDF)</a></div>
+          <div class="profile-actions"><a class="btn btn-sm btn-primary" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Download resume (PDF)</a> <a class="btn btn-sm btn-secondary" href="/resume/">View online resume</a></div>
         </aside>
         <div class="prose">
           <h2>Who is Akhil Shibu?</h2>
           <p>I am an MCA graduate from ${PERSON.college}, specialising in data analytics, business intelligence and automated ETL pipelines. My work targets real business and public-safety questions: where road accidents concentrate, how to clean messy spreadsheets repeatably, and how to give managers a dashboard they can trust.</p>
           <p>I cover the full lifecycle: scope the question, profile the raw schema, validate and clean records, aggregate with SQL window functions, and build Power BI star-schema models.</p>
-          <p>My experience comes from three portfolio projects (see the <a href="/projects/">data analytics case studies</a>) and two virtual job simulations on Forage.</p>
+          <p>My experience comes from three portfolio projects (see the <a href="/projects/">data analytics case studies</a>).</p>
           <h2>What principles guide the work?</h2>
           <ul class="principles">
             <li><strong>Data hygiene first.</strong> Audit schema drift, nulls and outliers before drawing conclusions.</li>
@@ -416,14 +419,6 @@ function aboutPage() {
             <li><strong>Automated and repeatable.</strong> Prefer SQL scripts and Python pipelines over manual steps, as in <a href="/projects/datasentrix/">Datasentrix</a>.</li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <section id="experience" class="container">
-      <div class="section-header"><h2 class="section-title">Which job simulations has Akhil completed?</h2><p class="section-desc">Client-style exercises completed on Forage in 2026. These are simulations, not employment.</p></div>
-      <div class="experience-grid">
-        <div class="experience-card"><div class="exp-header"><h3 class="exp-role">Data Analytics Job Simulation</h3><span class="exp-company">Deloitte Australia · Forage (2026)</span></div><p class="exp-desc">Spreadsheet cleaning and modelling, dashboard construction and a business-insights summary for a commercial client scenario.</p></div>
-        <div class="experience-card"><div class="exp-header"><h3 class="exp-role">GenAI-Powered Analytics Simulation</h3><span class="exp-company">Tata Insights · Forage (2026)</span></div><p class="exp-desc">Exploratory data analysis, dataset preparation for prediction, automated data storytelling and model validation.</p></div>
       </div>
     </section>
 
@@ -652,6 +647,54 @@ ${contactBlock()}
   return head(page, { graph }) + header('/faq/') + body + footer();
 }
 
+function resumePage() {
+  const page = PAGES.resume;
+  const bc = [['Home', '/'], ['Resume', '/resume/']];
+  const graph = [websiteNode(), { ...webPageNode(page, 'ProfilePage'), mainEntity: { '@id': url('/#akhil') } }, personNode(), crumbs(bc)];
+  const body = `
+  <main id="mainContent">
+    ${breadcrumbHtml(bc)}
+    <section class="container about-intro">
+      <div class="section-header">
+        <span class="section-tag">Resume</span>
+        <h1 class="section-title">Akhil Shibu: Data Analyst Resume (SQL, Power BI, Python, Excel)</h1>
+        <p class="section-desc">${PERSON.bio} Based in Thiruvananthapuram, Kerala, and open to roles in Kerala, across India and remote. <a href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Download the PDF version</a>.</p>
+      </div>
+      <div class="prose">
+        <h2>Contact</h2>
+        <ul class="principles">
+          <li>Email: <a href="mailto:${PERSON.email}">${PERSON.email}</a></li>
+          <li>Phone: <a href="tel:${PERSON.phoneHref}">${PERSON.phone}</a></li>
+          <li>LinkedIn: <a href="${PERSON.linkedin}" rel="me noopener">${PERSON.linkedin.replace('https://www.', '')}</a></li>
+          <li>GitHub: <a href="${PERSON.github}" rel="me noopener">github.com/eraofemperor</a></li>
+        </ul>
+        <h2>Education</h2>
+        <p><strong>Master of Computer Applications (MCA)</strong>, ${PERSON.college}, Kerala University, 2026. Coursework includes relational databases, SQL query optimisation, Python, algorithms and data structures, and web architecture.</p>
+        <h2>Skills</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Area</th><th>Tools and techniques</th><th>Shown in</th></tr></thead>
+          <tbody>
+            <tr><td>SQL</td><td>CTEs, window functions, aggregation (PostgreSQL, MySQL)</td><td><a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a></td></tr>
+            <tr><td>Business intelligence</td><td>Power BI, DAX measures, star-schema modelling, slicers</td><td><a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a></td></tr>
+            <tr><td>Excel</td><td>Pivot tables, XLOOKUP, slicer timelines, KPI cards</td><td><a href="/projects/bike-sales-dashboard/">Bike sales dashboard</a></td></tr>
+            <tr><td>Python</td><td>Pandas, NumPy, Matplotlib, Django, Z-score outlier checks</td><td><a href="/projects/datasentrix/">Datasentrix</a></td></tr>
+          </tbody></table></div>
+        <h2>Projects</h2>
+        <ul class="principles">${PROJECTS.map((p) => `<li><strong><a href="/projects/${p.slug}/">${esc(p.name)}</a>.</strong> ${esc(p.summary)}</li>`).join('')}</ul>
+        <h2>Course certificates</h2>
+        <ul class="principles">
+          <li>Google Cloud Fundamentals: Core Infrastructure (Google Cloud, Coursera)</li>
+          <li>Google API Architecture &amp; Integration (Google, Coursera)</li>
+          <li>AI Programming &amp; Machine Learning Foundations (IIT faculty, Coursera)</li>
+        </ul>
+        <p class="note">These are course completion certificates, not professional certification exams.</p>
+      </div>
+    </section>
+${contactBlock()}
+  </main>`;
+  return head(page, { graph, ogType: 'profile' }) + header('/resume/') + body + footer();
+}
+
 /* ------------------------------ static files ------------------------------ */
 function sitemap() {
   const urls = Object.values(PAGES).map((p) => `  <url>\n    <loc>${url(p.path)}</loc>\n    <lastmod>${BUILD_DATE}</lastmod>\n  </url>`);
@@ -663,7 +706,8 @@ const llms = () => `# Akhil Insights
 > ${PERSON.name} is a ${PERSON.role.toLowerCase().replace('data analyst', 'Data Analyst')} based in ${PERSON.locality}, ${PERSON.region}, India. ${PERSON.bio}
 
 ## About
-- [About ${PERSON.name}](${url('/about/')}): background, MCA education, course certificates, job simulations, contact.
+- [About ${PERSON.name}](${url('/about/')}): background, MCA education, course certificates, contact.
+- [Resume](${url('/resume/')}): skills, education, projects and contact details in plain HTML.
 - [FAQ](${url('/faq/')}): short answers about tools, projects, availability.
 
 ## Projects
@@ -697,6 +741,8 @@ await buildImages();
 write('index.html', homePage());
 write('about/index.html', aboutPage());
 write('projects/index.html', projectsIndex());
+write('resume/index.html', resumePage());
+write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 for (const p of PROJECTS) write(`projects/${p.slug}/index.html`, casePage(p.slug));
 write('faq/index.html', faqPage());
 write('404.html', notFound());

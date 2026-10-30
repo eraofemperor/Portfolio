@@ -3,7 +3,8 @@
 > Akhil Shibu is a Data Analyst & power bi specialist based in Thiruvananthapuram, Kerala, India. Data Analyst and Power BI specialist from Kerala, India, working with SQL, Python and ETL pipelines.
 
 ## About
-- [About Akhil Shibu](https://www.akhilinsights.com/about/): background, MCA education, course certificates, job simulations, contact.
+- [About Akhil Shibu](https://www.akhilinsights.com/about/): background, MCA education, course certificates, contact.
+- [Resume](https://www.akhilinsights.com/resume/): skills, education, projects and contact details in plain HTML.
 - [FAQ](https://www.akhilinsights.com/faq/): short answers about tools, projects, availability.
 
 ## Projects
