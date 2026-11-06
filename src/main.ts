@@ -33,7 +33,7 @@ function initLazyHero(): void {
     started = true;
     if (loadBtn) {
       loadBtn.disabled = true;
-      loadBtn.textContent = 'Loading…';
+      loadBtn.textContent = 'Loading...';
     }
     try {
       await loadScript(THREE_URL);
@@ -94,7 +94,57 @@ function initLazyHero(): void {
   io.observe(container);
 }
 
+/** Fade/slide-in on scroll. Opacity + translate only, so it cannot cause layout shift. */
+function initReveal(): void {
+  const els = document.querySelectorAll<HTMLElement>('.reveal');
+  if (!els.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(e => e.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(e => io.observe(e));
+}
+
+/** Highlights the nav item whose home-page section is currently in view. */
+function initScrollSpy(): void {
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.nav-link[data-section]'));
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  const ratios = new Map<string, number>();
+  const setActive = (id: string): void => {
+    links.forEach(l => {
+      const on = l.dataset.section === id;
+      l.classList.toggle('active', on);
+      if (on) l.setAttribute('aria-current', 'location');
+      else l.removeAttribute('aria-current');
+    });
+  };
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => ratios.set(e.target.id, e.isIntersecting ? e.intersectionRatio : 0));
+    let best = '';
+    let bestRatio = 0;
+    ratios.forEach((r, id) => { if (r > bestRatio) { bestRatio = r; best = id; } });
+    if (best) setActive(best);
+  }, { rootMargin: '-30% 0px -50% 0px', threshold: [0, 0.25, 0.5, 1] });
+  links.forEach(l => {
+    const s = document.getElementById(l.dataset.section as string);
+    if (s) io.observe(s);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Scroll-reveal and nav scroll-spy
+  initReveal();
+  initScrollSpy();
+
   // 1. Lazy WebGL hero (home page only)
   initLazyHero();
 

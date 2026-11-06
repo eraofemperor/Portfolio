@@ -1,11 +1,14 @@
 /* TEAM */
-  Data Analyst & Software Engineer: Akhil Shibu
+  Data Analyst, Business Intelligence & Business Analyst: Akhil Shibu
+  Brand: Akhil Insights
   Contact: akhilshibu03@gmail.com
-  Location: Kerala, India
-  LinkedIn: https://www.linkedin.com/in/akhil-shibu-
+  Location: Thiruvananthapuram, Kerala, India
+  LinkedIn: https://www.linkedin.com/in/-akhilshibu
   GitHub: https://github.com/eraofemperor
+  Resume: https://www.akhilinsights.com/resume/
 
 /* SITE */
-  Standards: HTML5, CSS3, Pure TypeScript (ES2022), Three.js
-  Optimization: Core Web Vitals (CWV), Geographic Engine Optimization (GEO), Answer Engine Optimization (AEO)
+  Standards: HTML5, CSS3, Pure TypeScript (ES2022), Schema.org JSON-LD
+  Optimization: Core Web Vitals (CWV), SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), ATS Resume Architecture
+  LLM Context: https://www.akhilinsights.com/llms.txt & https://www.akhilinsights.com/llms-full.txt
   Domain: https://www.akhilinsights.com

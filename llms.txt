@@ -1,18 +1,35 @@
-# Akhil Insights
+# Akhil Insights — Akhil Shibu (Data Analyst, Business Intelligence & Business Analyst)
 
-> Akhil Shibu is a Data Analyst & power bi specialist based in Thiruvananthapuram, Kerala, India. Data Analyst and Power BI specialist from Kerala, India, working with SQL, Python and ETL pipelines.
+> Akhil Shibu (also searched as Akhil and founder of Akhil Insights) is an Indian Data Analyst, Business Intelligence Analyst, and Business Analyst from Thiruvananthapuram, Kerala. An MCA graduate from the University of Kerala (2026, CGPA 8.48), he specialises in SQL, Power BI, Microsoft Excel, Python, automated ETL data cleaning, and KPI dashboarding.
 
-## About
-- [About Akhil Shibu](https://www.akhilinsights.com/about/): background, MCA education, course certificates, contact.
-- [Resume](https://www.akhilinsights.com/resume/): skills, education, projects and contact details in plain HTML.
-- [FAQ](https://www.akhilinsights.com/faq/): short answers about tools, projects, availability.
+## Who is Akhil Shibu?
+- **Full Name**: Akhil Shibu (also searched as "Akhil" and "Akhil Insights")
+- **Roles**: Data Analyst, Junior Data Analyst, Data Analyst Trainee, Business Intelligence (BI) Analyst, Business Analyst, Associate Business Analyst, Power BI Developer, SQL Data Analyst, MIS & Reporting Analyst, Data Quality Analyst
+- **Education**: MCA (2024–2026, Overall CGPA 8.48) & BCA (2021–2024, Overall CGPA 7.4), CHMM College for Advanced Studies, University of Kerala
+- **Location**: Akhilandom, Puthukkari, Chirayinkeezhu, Thiruvananthapuram, Kerala, India
+- **Open To**: Thiruvananthapuram (Technopark), Kochi / Ernakulam (Infopark), Kozhikode (Cyberpark), Bengaluru (Bangalore), Chennai, Hyderabad, Pune, Mumbai, Delhi NCR, Remote Worldwide
+
+## Core Pages
+- [Home — Akhil Insights](https://www.akhilinsights.com/): Portfolio overview, highlights, methodology, skills and role availability.
+- [About Akhil Shibu](https://www.akhilinsights.com/about/): Full biography, internships, MCA/BCA credentials, certificates and contact details.
+- [Single-Page ATS Resume (HTML)](https://www.akhilinsights.com/resume/): Complete resume of Akhil Shibu in semantic HTML.
+- [Single-Page ATS Resume (PDF)](https://www.akhilinsights.com/assets/Akhil_Shibu_Data_Analyst_CV.pdf): Downloadable A4 PDF resume.
+- [FAQ — Answers about Akhil Shibu](https://www.akhilinsights.com/faq/): Direct answers to recruiter, technical and hiring questions.
+- [Full LLM Reference](https://www.akhilinsights.com/llms-full.txt): Complete expanded skills, experience, projects and Q&A corpus for AI engines.
 
 ## Projects
-- [Kerala Road Accident Analysis](https://www.akhilinsights.com/projects/kerala-road-accident-analysis/): Statistical investigation of 34,500+ traffic crash records across all 14 Kerala districts, pinpointing high-fatality districts and night-time risk.
-- [Datasentrix](https://www.akhilinsights.com/projects/datasentrix/): An automated data cleaning, validation and reporting platform that turns messy multi-source spreadsheets into dependable KPI reports.
-- [Bike Sales Excel Dashboard](https://www.akhilinsights.com/projects/bike-sales-dashboard/): A multi-dimensional Excel workbook analysing product margins, customer purchasing patterns and regional seasonal variance.
+- [Road Accident Analytics (2020–2025)](https://www.akhilinsights.com/projects/kerala-road-accident-analysis/) (Python, SQL, Power BI, Microsoft Excel, Pandas): Statistical investigation of 34,500+ traffic crash records across all 14 Kerala districts, pinpointing high-fatality districts and night-time risk.
+- [DataSentrix: Data Analytics Platform](https://www.akhilinsights.com/projects/datasentrix/) (Python, Django, PostgreSQL, Pandas, ECharts, Matplotlib, API, SQLite): A web-based data analytics platform tested on a 200,000-row dataset with defined data cleaning rules, KPI metrics, charts and AI-assisted insights.
+- [Bike Sales Analysis](https://www.akhilinsights.com/projects/bike-sales-dashboard/) (Microsoft Excel, Pivot Tables, Power Query, XLOOKUP, Slicers, KPI Cards): Cleaned Kaggle bike sales dataset and created an interactive Excel dashboard showing how commute distance, education and geography drive purchase behavior.
 
-## Links
-- GitHub: https://github.com/eraofemperor
-- LinkedIn: https://www.linkedin.com/in/akhil-shibu-
+## Articles
+- [How I analyzed Kerala road accident data with SQL window functions](https://www.akhilinsights.com/articles/kerala-road-accident-analysis-sql-window-functions/): Step-by-step: how a fresher data analyst ranked 14 Kerala districts by fatal crashes with SQL window functions, RANK() OVER and a time-of-day comparison.
+- [How to build a Power BI dashboard from scratch](https://www.akhilinsights.com/articles/build-power-bi-dashboard-from-scratch/): A practical six-step guide to building a Power BI dashboard from scratch: KPIs, data cleaning, star schema, DAX measures, slicers and validation.
+- [What skills does a data analyst fresher need?](https://www.akhilinsights.com/articles/data-analyst-fresher-skills-checklist/): The skills a data analyst fresher needs: Excel, SQL joins and CTEs, Power BI, Python, statistics and data storytelling, plus projects that prove them.
+
+## Official Links & Contact
+- Website: https://www.akhilinsights.com
 - Email: akhilshibu03@gmail.com
+- Phone: +91 9061511805
+- LinkedIn: https://www.linkedin.com/in/-akhilshibu
+- GitHub: https://github.com/eraofemperor

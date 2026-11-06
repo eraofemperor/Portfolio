@@ -7,22 +7,40 @@
   <language>en</language>
   <atom:link href="https://www.akhilinsights.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
-    <title>Kerala Road Accident Analysis</title>
+    <title>Road Accident Analytics (2020–2025)</title>
     <link>https://www.akhilinsights.com/projects/kerala-road-accident-analysis/</link>
     <guid isPermaLink="true">https://www.akhilinsights.com/projects/kerala-road-accident-analysis/</guid>
     <description>Statistical investigation of 34,500+ traffic crash records across all 14 Kerala districts, pinpointing high-fatality districts and night-time risk.</description>
   </item>
   <item>
-    <title>Datasentrix</title>
+    <title>DataSentrix: Data Analytics Platform</title>
     <link>https://www.akhilinsights.com/projects/datasentrix/</link>
     <guid isPermaLink="true">https://www.akhilinsights.com/projects/datasentrix/</guid>
-    <description>An automated data cleaning, validation and reporting platform that turns messy multi-source spreadsheets into dependable KPI reports.</description>
+    <description>A web-based data analytics platform tested on a 200,000-row dataset with defined data cleaning rules, KPI metrics, charts and AI-assisted insights.</description>
   </item>
   <item>
-    <title>Bike Sales Excel Dashboard</title>
+    <title>Bike Sales Analysis</title>
     <link>https://www.akhilinsights.com/projects/bike-sales-dashboard/</link>
     <guid isPermaLink="true">https://www.akhilinsights.com/projects/bike-sales-dashboard/</guid>
-    <description>A multi-dimensional Excel workbook analysing product margins, customer purchasing patterns and regional seasonal variance.</description>
+    <description>Cleaned Kaggle bike sales dataset and created an interactive Excel dashboard showing how commute distance, education and geography drive purchase behavior.</description>
+  </item>
+  <item>
+    <title>How I analyzed Kerala road accident data with SQL window functions</title>
+    <link>https://www.akhilinsights.com/articles/kerala-road-accident-analysis-sql-window-functions/</link>
+    <guid isPermaLink="true">https://www.akhilinsights.com/articles/kerala-road-accident-analysis-sql-window-functions/</guid>
+    <description>Step-by-step: how a fresher data analyst ranked 14 Kerala districts by fatal crashes with SQL window functions, RANK() OVER and a time-of-day comparison.</description>
+  </item>
+  <item>
+    <title>How to build a Power BI dashboard from scratch</title>
+    <link>https://www.akhilinsights.com/articles/build-power-bi-dashboard-from-scratch/</link>
+    <guid isPermaLink="true">https://www.akhilinsights.com/articles/build-power-bi-dashboard-from-scratch/</guid>
+    <description>A practical six-step guide to building a Power BI dashboard from scratch: KPIs, data cleaning, star schema, DAX measures, slicers and validation.</description>
+  </item>
+  <item>
+    <title>What skills does a data analyst fresher need?</title>
+    <link>https://www.akhilinsights.com/articles/data-analyst-fresher-skills-checklist/</link>
+    <guid isPermaLink="true">https://www.akhilinsights.com/articles/data-analyst-fresher-skills-checklist/</guid>
+    <description>The skills a data analyst fresher needs: Excel, SQL joins and CTEs, Power BI, Python, statistics and data storytelling, plus projects that prove them.</description>
   </item>
 </channel>
 </rss>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Analyst Articles: SQL &amp; Power BI | Akhil Shibu</title>
+  <meta name="description" content="Short articles by Akhil Shibu on SQL window functions, building a Power BI dashboard from scratch and the skills a fresher data analyst needs. Read now.">
+  <meta name="keywords" content="Akhil, Akhil Shibu, Who is Akhil Shibu, Akhil Insights, Akhil Shibu Data Analyst, Akhil Shibu Business Analyst, Akhil Shibu Power BI, Akhil Shibu Resume, Akhil Shibu Portfolio, Akhil Shibu Kerala, Akhil Shibu Thiruvananthapuram, Data Analyst Fresher Kerala, Fresher Data Analyst India, Business Intelligence Analyst Fresher, Entry Level Business Analyst, Power BI Developer Fresher, SQL Data Analyst, Python Data Cleaning, Advanced Excel Dashboard, Technopark Data Analyst, Infopark Kochi Data Analyst, MCA Data Analyst Fresher, DataSentrix">
+  <meta name="author" content="Akhil Shibu">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="IN-KL">
+  <meta name="geo.placename" content="Thiruvananthapuram, Kerala, India">
+  <meta name="geo.position" content="8.5241;76.9366">
+  <meta name="ICBM" content="8.5241, 76.9366">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://www.akhilinsights.com/articles/">
+  <link rel="author" href="https://www.akhilinsights.com/about/">
+  <link rel="me" href="https://github.com/eraofemperor">
+  <link rel="me" href="https://www.linkedin.com/in/-akhilshibu">
+  <link rel="help" type="text/plain" title="LLM Context" href="/llms.txt">
+  <link rel="icon" href="/assets/icon-192.png" type="image/png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" type="application/rss+xml" title="Akhil Insights RSS Feed" href="https://www.akhilinsights.com/feed.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Akhil Insights">
+  <meta property="og:title" content="Data Analyst Articles: SQL &amp; Power BI | Akhil Shibu">
+  <meta property="og:description" content="Short articles by Akhil Shibu on SQL window functions, building a Power BI dashboard from scratch and the skills a fresher data analyst needs. Read now.">
+  <meta property="og:url" content="https://www.akhilinsights.com/articles/">
+  <meta property="og:image" content="https://www.akhilinsights.com/assets/akhil-og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Akhil Shibu, Data Analyst and Power BI specialist from Kerala">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Data Analyst Articles: SQL &amp; Power BI | Akhil Shibu">
+  <meta name="twitter:description" content="Short articles by Akhil Shibu on SQL window functions, building a Power BI dashboard from scratch and the skills a fresher data analyst needs. Read now.">
+  <meta name="twitter:image" content="https://www.akhilinsights.com/assets/akhil-og-image.jpg">
+
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.akhilinsights.com/#website",
+      "url": "https://www.akhilinsights.com/",
+      "name": "Akhil Insights",
+      "alternateName": [
+        "Akhil Shibu | Data Analytics & Business Intelligence",
+        "Akhil Shibu Portfolio",
+        "Akhil Data Analyst Portfolio"
+      ],
+      "inLanguage": "en",
+      "about": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "author": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "publisher": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "keywords": "Akhil, Akhil Shibu, Who is Akhil Shibu, Akhil Insights, Akhil Shibu Data Analyst, Akhil Shibu Business Analyst, Akhil Shibu Power BI, Akhil Shibu Resume, Akhil Shibu Portfolio, Akhil Shibu Kerala, Akhil Shibu Thiruvananthapuram, Data Analyst Fresher Kerala, Fresher Data Analyst India, Business Intelligence Analyst Fresher, Entry Level Business Analyst, Power BI Developer Fresher, SQL Data Analyst, Python Data Cleaning, Advanced Excel Dashboard, Technopark Data Analyst, Infopark Kochi Data Analyst, MCA Data Analyst Fresher, DataSentrix"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.akhilinsights.com/articles/#webpage",
+      "url": "https://www.akhilinsights.com/articles/",
+      "name": "Data Analyst Articles: SQL & Power BI | Akhil Shibu",
+      "description": "Short articles by Akhil Shibu on SQL window functions, building a Power BI dashboard from scratch and the skills a fresher data analyst needs. Read now.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.akhilinsights.com/#website"
+      },
+      "about": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "author": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "dateModified": "2026-11-06",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-text",
+          ".answer-box",
+          ".entity-statement"
+        ]
+      },
+      "mainEntity": {
+        "@id": "https://www.akhilinsights.com/articles/#list"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.akhilinsights.com/#akhil",
+      "name": "Akhil Shibu",
+      "givenName": "Akhil",
+      "familyName": "Shibu",
+      "alternateName": [
+        "Akhil",
+        "Akhil Shibu",
+        "Akhil Insights",
+        "Akhil Shibu Data Analyst",
+        "Akhil Shibu Business Analyst",
+        "Akhil Shibu Power BI",
+        "Akhil Shibu Kerala"
+      ],
+      "url": "https://www.akhilinsights.com/",
+      "image": "https://www.akhilinsights.com/assets/akhil-profile-500.jpg",
+      "email": "akhilshibu03@gmail.com",
+      "telephone": "+919061511805",
+      "jobTitle": "Fresher Data Analyst, Business Intelligence Analyst & Business Analyst",
+      "description": "Fresher Data Analyst, Business Analyst and Power BI specialist (MCA 2026, CGPA 8.48) from Kerala, India, working with SQL, Excel, Python and ETL pipelines.",
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsLanguage": [
+        "English"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thiruvananthapuram",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Thiruvananthapuram, Kerala, India"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "CHMM College for Advanced Studies"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Kerala"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Master of Computer Applications (MCA) — Overall CGPA 8.48",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Kerala"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Bachelor of Computer Applications (BCA) — Overall CGPA 7.4",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Kerala"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Google AI Essentials",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Coursera / Google"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Prompt Engineering",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Infosys Springboard"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "SQL",
+        "SQL joins",
+        "SQL subqueries",
+        "CTEs",
+        "SQL window functions",
+        "SQL for data analysis",
+        "Power BI",
+        "DAX",
+        "Star Schema",
+        "Power Query",
+        "KPI Dashboards",
+        "Python",
+        "Python for data analysis",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Django",
+        "Microsoft Excel",
+        "Advanced Excel",
+        "Excel dashboards",
+        "Pivot Tables",
+        "VLOOKUP",
+        "XLOOKUP",
+        "Google Sheets",
+        "ETL",
+        "ETL Pipelines",
+        "Data Cleaning",
+        "Data Validation",
+        "Data Modeling",
+        "Exploratory Data Analysis",
+        "Statistical Analysis",
+        "Variance Analysis",
+        "Root Cause Analysis",
+        "Cohort Analysis",
+        "Data Storytelling",
+        "Data Visualization",
+        "Business Intelligence",
+        "Business Analysis",
+        "KPI Reporting",
+        "MIS Reporting",
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "ECharts",
+        "REST API Testing",
+        "Postman",
+        "Functional Testing",
+        "Quality Assurance"
+      ],
+      "sameAs": [
+        "https://github.com/eraofemperor",
+        "https://www.linkedin.com/in/-akhilshibu"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Data Analyst",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "SQL, Power BI, Python, Microsoft Excel, Data Cleaning, ETL, EDA"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Business Intelligence Analyst",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "Power BI, DAX, Star Schema, KPI Dashboards, Data Modeling, SQL"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Business Analyst",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "KPI reporting, Variance Analysis, Requirements Gathering, SQL, Power BI, Excel"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Power BI Developer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "Power BI, DAX Measures, Power Query, Slicers, Interactive Dashboards"
+        }
+      ],
+      "mainEntityOfPage": "https://www.akhilinsights.com/about/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.akhilinsights.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://www.akhilinsights.com/articles/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.akhilinsights.com/articles/#list",
+      "name": "Data analyst articles by Akhil Shibu",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "How I analyzed Kerala road accident data with SQL window functions",
+          "url": "https://www.akhilinsights.com/articles/kerala-road-accident-analysis-sql-window-functions/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to build a Power BI dashboard from scratch",
+          "url": "https://www.akhilinsights.com/articles/build-power-bi-dashboard-from-scratch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What skills does a data analyst fresher need?",
+          "url": "https://www.akhilinsights.com/articles/data-analyst-fresher-skills-checklist/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head><body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <header class="site-header">
+    <nav class="container site-nav" aria-label="Main Navigation">
+      <a class="nav-brand" href="/">
+        <span class="brand-badge" aria-hidden="true"><svg viewBox="0 0 36 36" width="36" height="36" focusable="false"><defs><linearGradient id="bmk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#0D9488"/></linearGradient></defs><rect width="36" height="36" rx="10" fill="url(#bmk)"/><text x="18" y="20" text-anchor="middle" font-family="Outfit, Inter, sans-serif" font-size="15" font-weight="800" fill="#fff" letter-spacing="-0.5">AS</text><path d="M8 28l6-4 5 2 9-6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/><circle cx="28" cy="20" r="2" fill="#F59E0B"/></svg></span>
+        <span class="brand-text">Akhil Insights</span>
+        <span class="brand-sub">Data Analyst</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+        <li><a class="nav-link" href="/projects/">Projects</a></li>
+        <li><a class="nav-link active" aria-current="page" href="/articles/">Articles</a></li>
+        <li><a class="nav-link" href="/faq/">FAQ</a></li>
+        <li><a class="nav-link" href="/about/#contact">Contact</a></li>
+        <li><a class="nav-cta" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Articles</li></ol></nav>
+    <section class="container">
+      <div class="section-header">
+        <span class="section-tag">Articles</span>
+        <h1 class="section-title">Data analyst articles: SQL, Power BI and fresher skills</h1>
+        <p class="section-desc">Short, answer-first guides written by Akhil Shibu from his own portfolio projects.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card project-card--plain flagship">
+          <div>
+            <h2 class="project-title"><a href="/articles/kerala-road-accident-analysis-sql-window-functions/">How I analyzed Kerala road accident data with SQL window functions</a></h2>
+            <p class="project-summary">To analyze road accident data with SQL window functions, clean the crash records, count fatal crashes per district, then rank districts with RANK() OVER. A second query compares night and day crashes. On 34,500+ Kerala records this showed Thiruvananthapuram and Ernakulam hold 29.1% of fatal crashes.</p>
+          </div>
+          <div class="project-links"><a class="btn btn-sm btn-primary" href="/articles/kerala-road-accident-analysis-sql-window-functions/">Read the article</a></div>
+        </article>
+        <article class="project-card project-card--plain flagship">
+          <div>
+            <h2 class="project-title"><a href="/articles/build-power-bi-dashboard-from-scratch/">How to build a Power BI dashboard from scratch</a></h2>
+            <p class="project-summary">To build a Power BI dashboard from scratch, define the business question and KPIs, import and clean the data, model it as a star schema, write DAX measures, add visuals with slicers and drill-downs, then validate the numbers against the source before publishing. Keep the first page focused on one decision.</p>
+          </div>
+          <div class="project-links"><a class="btn btn-sm btn-primary" href="/articles/build-power-bi-dashboard-from-scratch/">Read the article</a></div>
+        </article>
+        <article class="project-card project-card--plain flagship">
+          <div>
+            <h2 class="project-title"><a href="/articles/data-analyst-fresher-skills-checklist/">What skills does a data analyst fresher need?</a></h2>
+            <p class="project-summary">A data analyst fresher needs advanced Excel, SQL joins, subqueries and CTEs, one BI tool such as Power BI, Python with Pandas for data cleaning, basic statistics and data storytelling. A portfolio of real projects matters more than a list of tools, because it shows the skills working together.</p>
+          </div>
+          <div class="project-links"><a class="btn btn-sm btn-primary" href="/articles/data-analyst-fresher-skills-checklist/">Read the article</a></div>
+        </article>
+      </div>
+      <p class="more-link">See the work behind them: <a href="/projects/">data analyst portfolio projects</a> &middot; <a href="/faq/">FAQ</a>.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>Akhil Shibu</strong> &middot; Fresher Data Analyst & Business Analyst (Power BI, SQL)</div>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="/about/">About Akhil Shibu</a>
+        <a href="/resume/">Online resume</a>
+        <a href="/projects/">Data analyst portfolio projects</a>
+        <a href="/articles/">Articles</a>
+        <a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a>
+        <a href="/projects/datasentrix/">Datasentrix</a>
+        <a href="/projects/bike-sales-dashboard/">Bike sales dashboard</a>
+        <a href="/faq/">FAQ</a>
+        <a href="https://github.com/eraofemperor" rel="me noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/-akhilshibu" rel="me noopener">LinkedIn</a>
+      </nav>
+      <div>&copy; <span id="currentYear">2026</span> Akhil Shibu. All rights reserved.</div>
+    </div>
+    <div class="container"><p class="entity-statement">Akhil Shibu is a fresher Data Analyst and Business Analyst (MCA 2026, CGPA 8.48) from Thiruvananthapuram, Kerala, India, skilled in SQL, Power BI, Excel and Python.</p></div>
+  </footer>
+  <a class="mobile-cta" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Download resume (PDF)</a>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

@@ -3,20 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kerala Road Accident Analysis | Akhil Insights</title>
-  <meta name="description" content="Analysis of 34,500+ Kerala crash records across 14 districts: 29.1% of fatal crashes sit in two districts and night crashes are deadlier. See the method.">
+  <title>Kerala Road Accident Analysis: SQL &amp; Power BI Project</title>
+  <meta name="description" content="Kerala accident data analysis of 34,500+ crash records in 14 districts: SQL window functions and Power BI show 29.1% of fatal crashes in two districts.">
+  <meta name="keywords" content="Akhil, Akhil Shibu, Who is Akhil Shibu, Akhil Insights, Akhil Shibu Data Analyst, Akhil Shibu Business Analyst, Akhil Shibu Power BI, Akhil Shibu Resume, Akhil Shibu Portfolio, Akhil Shibu Kerala, Akhil Shibu Thiruvananthapuram, Data Analyst Fresher Kerala, Fresher Data Analyst India, Business Intelligence Analyst Fresher, Entry Level Business Analyst, Power BI Developer Fresher, SQL Data Analyst, Python Data Cleaning, Advanced Excel Dashboard, Technopark Data Analyst, Infopark Kochi Data Analyst, MCA Data Analyst Fresher, DataSentrix">
   <meta name="author" content="Akhil Shibu">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="geo.region" content="IN-KL">
+  <meta name="geo.placename" content="Thiruvananthapuram, Kerala, India">
+  <meta name="geo.position" content="8.5241;76.9366">
+  <meta name="ICBM" content="8.5241, 76.9366">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.akhilinsights.com/projects/kerala-road-accident-analysis/">
+  <link rel="author" href="https://www.akhilinsights.com/about/">
+  <link rel="me" href="https://github.com/eraofemperor">
+  <link rel="me" href="https://www.linkedin.com/in/-akhilshibu">
+  <link rel="help" type="text/plain" title="LLM Context" href="/llms.txt">
   <link rel="icon" href="/assets/icon-192.png" type="image/png">
   <link rel="manifest" href="/manifest.json">
   <link rel="alternate" type="application/rss+xml" title="Akhil Insights RSS Feed" href="https://www.akhilinsights.com/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Akhil Insights">
-  <meta property="og:title" content="Kerala Road Accident Analysis | Akhil Insights">
-  <meta property="og:description" content="Analysis of 34,500+ Kerala crash records across 14 districts: 29.1% of fatal crashes sit in two districts and night crashes are deadlier. See the method.">
+  <meta property="og:title" content="Kerala Road Accident Analysis: SQL &amp; Power BI Project">
+  <meta property="og:description" content="Kerala accident data analysis of 34,500+ crash records in 14 districts: SQL window functions and Power BI show 29.1% of fatal crashes in two districts.">
   <meta property="og:url" content="https://www.akhilinsights.com/projects/kerala-road-accident-analysis/">
   <meta property="og:image" content="https://www.akhilinsights.com/assets/akhil-og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -25,11 +34,13 @@
   <meta property="og:image:alt" content="Akhil Shibu, Data Analyst and Power BI specialist from Kerala">
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kerala Road Accident Analysis | Akhil Insights">
-  <meta name="twitter:description" content="Analysis of 34,500+ Kerala crash records across 14 districts: 29.1% of fatal crashes sit in two districts and night crashes are deadlier. See the method.">
+  <meta name="twitter:title" content="Kerala Road Accident Analysis: SQL &amp; Power BI Project">
+  <meta name="twitter:description" content="Kerala accident data analysis of 34,500+ crash records in 14 districts: SQL window functions and Power BI show 29.1% of fatal crashes in two districts.">
   <meta name="twitter:image" content="https://www.akhilinsights.com/assets/akhil-og-image.jpg">
 
-  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/css/style.css">
 
   <script type="application/ld+json">
@@ -41,18 +52,29 @@
       "@id": "https://www.akhilinsights.com/#website",
       "url": "https://www.akhilinsights.com/",
       "name": "Akhil Insights",
-      "alternateName": "Akhil Shibu | Data Analytics & Business Intelligence",
+      "alternateName": [
+        "Akhil Shibu | Data Analytics & Business Intelligence",
+        "Akhil Shibu Portfolio",
+        "Akhil Data Analyst Portfolio"
+      ],
       "inLanguage": "en",
+      "about": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "author": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
       "publisher": {
         "@id": "https://www.akhilinsights.com/#akhil"
-      }
+      },
+      "keywords": "Akhil, Akhil Shibu, Who is Akhil Shibu, Akhil Insights, Akhil Shibu Data Analyst, Akhil Shibu Business Analyst, Akhil Shibu Power BI, Akhil Shibu Resume, Akhil Shibu Portfolio, Akhil Shibu Kerala, Akhil Shibu Thiruvananthapuram, Data Analyst Fresher Kerala, Fresher Data Analyst India, Business Intelligence Analyst Fresher, Entry Level Business Analyst, Power BI Developer Fresher, SQL Data Analyst, Python Data Cleaning, Advanced Excel Dashboard, Technopark Data Analyst, Infopark Kochi Data Analyst, MCA Data Analyst Fresher, DataSentrix"
     },
     {
       "@type": "WebPage",
       "@id": "https://www.akhilinsights.com/projects/kerala-road-accident-analysis/#webpage",
       "url": "https://www.akhilinsights.com/projects/kerala-road-accident-analysis/",
-      "name": "Kerala Road Accident Analysis | Akhil Insights",
-      "description": "Analysis of 34,500+ Kerala crash records across 14 districts: 29.1% of fatal crashes sit in two districts and night crashes are deadlier. See the method.",
+      "name": "Kerala Road Accident Analysis: SQL & Power BI Project",
+      "description": "Kerala accident data analysis of 34,500+ crash records in 14 districts: SQL window functions and Power BI show 29.1% of fatal crashes in two districts.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.akhilinsights.com/#website"
@@ -60,7 +82,18 @@
       "about": {
         "@id": "https://www.akhilinsights.com/#akhil"
       },
-      "dateModified": "2026-10-30",
+      "author": {
+        "@id": "https://www.akhilinsights.com/#akhil"
+      },
+      "dateModified": "2026-11-06",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-text",
+          ".answer-box",
+          ".entity-statement"
+        ]
+      },
       "mainEntity": {
         "@id": "https://www.akhilinsights.com/projects/kerala-road-accident-analysis/#project"
       }
@@ -69,49 +102,180 @@
       "@type": "Person",
       "@id": "https://www.akhilinsights.com/#akhil",
       "name": "Akhil Shibu",
+      "givenName": "Akhil",
+      "familyName": "Shibu",
+      "alternateName": [
+        "Akhil",
+        "Akhil Shibu",
+        "Akhil Insights",
+        "Akhil Shibu Data Analyst",
+        "Akhil Shibu Business Analyst",
+        "Akhil Shibu Power BI",
+        "Akhil Shibu Kerala"
+      ],
       "url": "https://www.akhilinsights.com/",
       "image": "https://www.akhilinsights.com/assets/akhil-profile-500.jpg",
-      "jobTitle": "Data Analyst",
-      "description": "Data Analyst and Power BI specialist from Kerala, India, working with SQL, Python and ETL pipelines.",
+      "email": "akhilshibu03@gmail.com",
+      "telephone": "+919061511805",
+      "jobTitle": "Fresher Data Analyst, Business Intelligence Analyst & Business Analyst",
+      "description": "Fresher Data Analyst, Business Analyst and Power BI specialist (MCA 2026, CGPA 8.48) from Kerala, India, working with SQL, Excel, Python and ETL pipelines.",
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsLanguage": [
+        "English"
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Thiruvananthapuram",
         "addressRegion": "Kerala",
         "addressCountry": "IN"
       },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "CHMM College for Advanced Studies"
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Thiruvananthapuram, Kerala, India"
       },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "CHMM College for Advanced Studies"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Kerala"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Master of Computer Applications (MCA) — Overall CGPA 8.48",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Kerala"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Bachelor of Computer Applications (BCA) — Overall CGPA 7.4",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Kerala"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Google AI Essentials",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Coursera / Google"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Prompt Engineering",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Infosys Springboard"
+          }
+        }
+      ],
       "knowsAbout": [
         "SQL",
+        "SQL joins",
+        "SQL subqueries",
+        "CTEs",
         "SQL window functions",
+        "SQL for data analysis",
         "Power BI",
         "DAX",
+        "Star Schema",
+        "Power Query",
+        "KPI Dashboards",
         "Python",
+        "Python for data analysis",
         "Pandas",
+        "NumPy",
+        "Matplotlib",
         "Django",
         "Microsoft Excel",
+        "Advanced Excel",
+        "Excel dashboards",
         "Pivot Tables",
+        "VLOOKUP",
         "XLOOKUP",
+        "Google Sheets",
         "ETL",
+        "ETL Pipelines",
         "Data Cleaning",
         "Data Validation",
-        "Data Visualization"
+        "Data Modeling",
+        "Exploratory Data Analysis",
+        "Statistical Analysis",
+        "Variance Analysis",
+        "Root Cause Analysis",
+        "Cohort Analysis",
+        "Data Storytelling",
+        "Data Visualization",
+        "Business Intelligence",
+        "Business Analysis",
+        "KPI Reporting",
+        "MIS Reporting",
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "ECharts",
+        "REST API Testing",
+        "Postman",
+        "Functional Testing",
+        "Quality Assurance"
       ],
       "sameAs": [
         "https://github.com/eraofemperor",
-        "https://www.linkedin.com/in/akhil-shibu-"
+        "https://www.linkedin.com/in/-akhilshibu"
       ],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Data Analyst",
-        "occupationLocation": {
-          "@type": "Country",
-          "name": "India"
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Data Analyst",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "SQL, Power BI, Python, Microsoft Excel, Data Cleaning, ETL, EDA"
         },
-        "skills": "SQL, Power BI, Python, Excel"
-      },
+        {
+          "@type": "Occupation",
+          "name": "Business Intelligence Analyst",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "Power BI, DAX, Star Schema, KPI Dashboards, Data Modeling, SQL"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Business Analyst",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "KPI reporting, Variance Analysis, Requirements Gathering, SQL, Power BI, Excel"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Power BI Developer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "skills": "Power BI, DAX Measures, Power Query, Slicers, Interactive Dashboards"
+        }
+      ],
       "mainEntityOfPage": "https://www.akhilinsights.com/about/"
     },
     {
@@ -132,7 +296,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Kerala Road Accident Analysis",
+          "name": "Road Accident Analytics (2020–2025)",
           "item": "https://www.akhilinsights.com/projects/kerala-road-accident-analysis/"
         }
       ]
@@ -140,14 +304,14 @@
     {
       "@id": "https://www.akhilinsights.com/projects/kerala-road-accident-analysis/#project",
       "@type": "CreativeWork",
-      "name": "Kerala Road Accident Analysis",
+      "name": "Road Accident Analytics (2020–2025)",
       "description": "This case study analyses 34,500+ road crash records from all 14 Kerala districts using SQL window functions and Power BI. Thiruvananthapuram and Ernakulam account for 29.1% of fatal crashes, and crashes between 20:00 and 04:00 have a 64.2% higher fatality severity ratio.",
       "url": "https://www.akhilinsights.com/projects/kerala-road-accident-analysis/",
       "creator": {
         "@id": "https://www.akhilinsights.com/#akhil"
       },
-      "dateModified": "2026-10-30",
-      "keywords": "SQL window functions, Power BI, Microsoft Excel, Pandas, MoRTH public data"
+      "dateModified": "2026-11-06",
+      "keywords": "Python, SQL, Power BI, Microsoft Excel, Pandas, data analyst case study, road accident analysis India, Kerala accident data analysis, SQL project with dataset, Power BI dashboard examples"
     },
     {
       "@type": "FAQPage",
@@ -187,7 +351,7 @@
   <header class="site-header">
     <nav class="container site-nav" aria-label="Main Navigation">
       <a class="nav-brand" href="/">
-        <span class="brand-badge" aria-hidden="true">AI</span>
+        <span class="brand-badge" aria-hidden="true"><svg viewBox="0 0 36 36" width="36" height="36" focusable="false"><defs><linearGradient id="bmk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#0D9488"/></linearGradient></defs><rect width="36" height="36" rx="10" fill="url(#bmk)"/><text x="18" y="20" text-anchor="middle" font-family="Outfit, Inter, sans-serif" font-size="15" font-weight="800" fill="#fff" letter-spacing="-0.5">AS</text><path d="M8 28l6-4 5 2 9-6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/><circle cx="28" cy="20" r="2" fill="#F59E0B"/></svg></span>
         <span class="brand-text">Akhil Insights</span>
         <span class="brand-sub">Data Analyst</span>
       </a>
@@ -198,6 +362,7 @@
         <li><a class="nav-link" href="/">Home</a></li>
         <li><a class="nav-link" href="/about/">About</a></li>
         <li><a class="nav-link active" aria-current="page" href="/projects/">Projects</a></li>
+        <li><a class="nav-link" href="/articles/">Articles</a></li>
         <li><a class="nav-link" href="/faq/">FAQ</a></li>
         <li><a class="nav-link" href="/about/#contact">Contact</a></li>
         <li><a class="nav-cta" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Resume</a></li>
@@ -206,12 +371,12 @@
   </header>
 
   <main id="mainContent">
-    <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li aria-current="page">Kerala Road Accident Analysis</li></ol></nav>
+    <nav class="breadcrumb container" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li aria-current="page">Road Accident Analytics (2020–2025)</li></ol></nav>
     <article class="container case-study">
       <header class="section-header">
         <span class="section-tag">Case study</span>
         <h1 class="section-title">Kerala Road Accident Analysis: 34,500+ Crash Records</h1>
-        <p class="answer-box">This case study analyses 34,500+ road crash records from all 14 Kerala districts using SQL window functions and Power BI. Thiruvananthapuram and Ernakulam account for 29.1% of fatal crashes, and crashes between 20:00 and 04:00 have a 64.2% higher fatality severity ratio.</p>
+        <p class="answer-box speakable-text">This case study analyses 34,500+ road crash records from all 14 Kerala districts using SQL window functions and Power BI. Thiruvananthapuram and Ernakulam account for 29.1% of fatal crashes, and crashes between 20:00 and 04:00 have a 64.2% higher fatality severity ratio.</p>
       </header>
       <div class="table-wrap"><table class="facts-table"><caption>Project facts</caption><tbody><tr><th scope="row">Role</th><td>Analyst (solo portfolio project)</td></tr><tr><th scope="row">Data</th><td>34,500+ crash records, MoRTH public data</td></tr><tr><th scope="row">Coverage</th><td>All 14 Kerala districts</td></tr><tr><th scope="row">Tools</th><td>SQL window functions, Power BI, Excel, Pandas</td></tr><tr><th scope="row">Status</th><td>Completed analysis</td></tr></tbody></table></div>
 
@@ -232,9 +397,11 @@
       <p><strong>Fatality severity ratio</strong> compares how deadly crashes are, not how many there are. It is the share of crashes that end in a death, calculated for one time window and divided by the same share for the rest of the day. Night-time crashes (20:00-04:00) scored 64.2% higher on this measure.</p>
       <h2>Which districts did the analysis cover?</h2>
       <p>All 14: Thiruvananthapuram, Kollam, Pathanamthitta, Alappuzha, Kottayam, Idukki, Ernakulam, Thrissur, Palakkad, Malappuram, Kozhikode, Wayanad, Kannur and Kasaragod.</p>
+      <h2>Why is this a useful data analyst case study?</h2>
+      <p>It is an end-to-end SQL project with a real dataset: cleaning, window-function ranking, a severity index and a Power BI dashboard. It doubles as a road accident analysis for India that other analysts can reuse on their own state data. Follow the method step by step in the <a href="/articles/kerala-road-accident-analysis-sql-window-functions/">SQL window functions article</a>.</p>
 
       <h2>Which tools were used?</h2>
-      <div class="tech-pills"><span class="tech-pill">SQL window functions</span><span class="tech-pill">Power BI</span><span class="tech-pill">Microsoft Excel</span><span class="tech-pill">Pandas</span><span class="tech-pill">MoRTH public data</span></div>
+      <div class="tech-pills"><span class="tech-pill">Python</span><span class="tech-pill">SQL</span><span class="tech-pill">Power BI</span><span class="tech-pill">Microsoft Excel</span><span class="tech-pill">Pandas</span></div>
       <p><a class="btn btn-sm btn-primary" href="https://github.com/eraofemperor" target="_blank" rel="noopener noreferrer">View Road Accident Analysis in Kerala on GitHub</a></p>
 
       <h2>Frequently asked questions</h2>
@@ -259,28 +426,34 @@
         </details>
       </div>
 
+      <h2>About the analyst: Akhil Shibu</h2>
+      <p><strong><a href="/about/">Akhil Shibu</a></strong> is a fresher Data Analyst, Business Intelligence Analyst, and Business Analyst (MCA 2026, CGPA 8.48, University of Kerala) based in Thiruvananthapuram, Kerala, India. View his <a href="/resume/">single-page ATS resume</a> or <a href="/about/#contact">contact Akhil Shibu</a> for full-time, trainee, or remote analytics roles.</p>
+
       <h2>More case studies</h2>
-      <ul class="related"><li><a href="/projects/datasentrix/">Datasentrix: An automated data cleaning, validation and reporting platform that turns messy multi-source spreadsheets into dependable KPI reports.</a></li><li><a href="/projects/bike-sales-dashboard/">Bike Sales Excel Dashboard: A multi-dimensional Excel workbook analysing product margins, customer purchasing patterns and regional seasonal variance.</a></li>
+      <ul class="related"><li><a href="/projects/datasentrix/">DataSentrix: Data Analytics Platform: A web-based data analytics platform tested on a 200,000-row dataset with defined data cleaning rules, KPI metrics, charts and AI-assisted insights.</a></li><li><a href="/projects/bike-sales-dashboard/">Bike Sales Analysis: Cleaned Kaggle bike sales dataset and created an interactive Excel dashboard showing how commute distance, education and geography drive purchase behavior.</a></li>
         <li><a href="/about/">About Akhil Shibu</a> and <a href="/about/#contact">how to contact him</a></li></ul>
     </article>
   </main>
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div><strong>Akhil Shibu</strong> · Data Analyst & Power BI Specialist</div>
+      <div><strong>Akhil Shibu</strong> &middot; Fresher Data Analyst & Business Analyst (Power BI, SQL)</div>
       <nav class="footer-nav" aria-label="Footer Navigation">
         <a href="/about/">About Akhil Shibu</a>
         <a href="/resume/">Online resume</a>
-        <a href="/projects/">Data analytics projects</a>
+        <a href="/projects/">Data analyst portfolio projects</a>
+        <a href="/articles/">Articles</a>
         <a href="/projects/kerala-road-accident-analysis/">Kerala road accident analysis</a>
         <a href="/projects/datasentrix/">Datasentrix</a>
         <a href="/projects/bike-sales-dashboard/">Bike sales dashboard</a>
         <a href="/faq/">FAQ</a>
         <a href="https://github.com/eraofemperor" rel="me noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/akhil-shibu-" rel="me noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/-akhilshibu" rel="me noopener">LinkedIn</a>
       </nav>
-      <div>© <span id="currentYear">2026</span> Akhil Shibu. All rights reserved.</div>
+      <div>&copy; <span id="currentYear">2026</span> Akhil Shibu. All rights reserved.</div>
     </div>
+    <div class="container"><p class="entity-statement">Akhil Shibu is a fresher Data Analyst and Business Analyst (MCA 2026, CGPA 8.48) from Thiruvananthapuram, Kerala, India, skilled in SQL, Power BI, Excel and Python.</p></div>
   </footer>
+  <a class="mobile-cta" href="/assets/Akhil_Shibu_Data_Analyst_CV.pdf" download>Download resume (PDF)</a>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
